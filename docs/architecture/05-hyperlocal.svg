@@ -1,0 +1,254 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1050" width="100%" height="100%" style="background:#0b0f19; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <marker id="arrowB5" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowG5" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#10b981"/>
+    </marker>
+    <marker id="arrowP5" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#a855f7"/>
+    </marker>
+    <filter id="shadow5" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1050" fill="url(#bgGrad5)"/>
+
+  <!-- Top Title Banner -->
+  <rect x="40" y="30" width="1520" height="80" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow5)"/>
+  <text x="70" y="66" fill="#f8fafc" font-size="22" font-weight="800">DIAGRAM 5: HYPERLOCAL LOCATION &amp; SPATIAL ATTRIBUTION ARCHITECTURE</text>
+  <text x="70" y="90" fill="#94a3b8" font-size="13">Gram Panchayat &amp; Village-Level Disaggregation: Administrative Hierarchy + Multilayer Topographic Spatial Fusion</text>
+  <rect x="1270" y="48" width="260" height="42" rx="6" fill="#0f172a" stroke="#0ea5e9" stroke-width="1.2"/>
+  <text x="1400" y="74" fill="#38bdf8" font-size="12" font-weight="700" text-anchor="middle">VILLAGE-SCALE RESOLUTION</text>
+
+  <!-- ================= TIER 1: ADMINISTRATIVE HIERARCHY RESOLUTION ================= -->
+  <g transform="translate(40, 130)">
+    <rect width="1520" height="155" rx="12" fill="#0f172a" stroke="#0284c7" stroke-width="1.5" filter="url(#shadow5)"/>
+    <rect width="1520" height="28" rx="12" fill="#0369a1"/>
+    <rect y="18" width="1520" height="10" fill="#0369a1"/>
+    <text x="20" y="20" fill="#ffffff" font-size="12" font-weight="900" letter-spacing="1">STEP 1: HIERARCHICAL ADMINISTRATIVE LOCATION RESOLUTION (CanonicalLocationResolver)</text>
+
+    <!-- Administrative Flow Boxes -->
+    <g transform="translate(20, 42)">
+      <!-- Level 1: GPS Fix -->
+      <g transform="translate(0, 0)">
+        <rect width="215" height="92" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+        <text x="15" y="22" fill="#38bdf8" font-size="12" font-weight="800">1. Coordinates (Lat/Lon)</text>
+        <text x="15" y="40" fill="#e2e8f0" font-size="10">Android FusedLocationProvider</text>
+        <text x="15" y="56" fill="#94a3b8" font-size="9.5">Clamped Precision: 4 decimal places</text>
+        <text x="15" y="72" fill="#94a3b8" font-size="9.5">Accuracy: ± 10–50 meters</text>
+        <text x="15" y="84" fill="#64748b" font-size="8.5">Fallback: Offline District Centroid</text>
+      </g>
+
+      <line x1="225" y1="46" x2="248" y2="46" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowB5)"/>
+
+      <!-- Level 2: State -->
+      <g transform="translate(255, 0)">
+        <rect width="220" height="92" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+        <text x="15" y="22" fill="#38bdf8" font-size="12" font-weight="800">2. State Level</text>
+        <text x="15" y="40" fill="#e2e8f0" font-size="10">28 States &amp; 8 Union Territories</text>
+        <text x="15" y="56" fill="#94a3b8" font-size="9.5">State Disaster Mgmt (SDMA) Scope</text>
+        <text x="15" y="72" fill="#94a3b8" font-size="9.5">Regional Agromet Advisory Body</text>
+        <text x="15" y="84" fill="#64748b" font-size="8.5">e.g. Maharashtra, Uttar Pradesh</text>
+      </g>
+
+      <line x1="485" y1="46" x2="508" y2="46" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowB5)"/>
+
+      <!-- Level 3: District -->
+      <g transform="translate(515, 0)">
+        <rect width="225" height="92" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+        <text x="15" y="22" fill="#38bdf8" font-size="12" font-weight="800">3. District Level</text>
+        <text x="15" y="40" fill="#e2e8f0" font-size="10">750+ Indian Districts</text>
+        <text x="15" y="56" fill="#94a3b8" font-size="9.5">Official IMD Warning Unit</text>
+        <text x="15" y="72" fill="#94a3b8" font-size="9.5">Color Code: Green/Yellow/Orange/Red</text>
+        <text x="15" y="84" fill="#64748b" font-size="8.5">e.g. Pune, Cuttack, Varanasi</text>
+      </g>
+
+      <line x1="750" y1="46" x2="773" y2="46" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowB5)"/>
+
+      <!-- Level 4: Sub-District / Tehsil -->
+      <g transform="translate(780, 0)">
+        <rect width="225" height="92" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+        <text x="15" y="22" fill="#38bdf8" font-size="12" font-weight="800">4. Sub-District / Tehsil</text>
+        <text x="15" y="40" fill="#e2e8f0" font-size="10">Administrative Taluka / Tehsil</text>
+        <text x="15" y="56" fill="#94a3b8" font-size="9.5">River catchment sub-basin link</text>
+        <text x="15" y="72" fill="#94a3b8" font-size="9.5">Local terrain slope &amp; drainage</text>
+        <text x="15" y="84" fill="#64748b" font-size="8.5">e.g. Haveli, Barabati, Sadar</text>
+      </g>
+
+      <line x1="1015" y1="46" x2="1038" y2="46" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowB5)"/>
+
+      <!-- Level 5: Block / CD Block -->
+      <g transform="translate(1045, 0)">
+        <rect width="215" height="92" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+        <text x="15" y="22" fill="#38bdf8" font-size="12" font-weight="800">5. Community Block</text>
+        <text x="15" y="40" fill="#e2e8f0" font-size="10">6,600+ Development Blocks</text>
+        <text x="15" y="56" fill="#94a3b8" font-size="9.5">Krishi Vigyan Kendra (KVK) grid</text>
+        <text x="15" y="72" fill="#94a3b8" font-size="9.5">Agricultural soil type zoning</text>
+        <text x="15" y="84" fill="#64748b" font-size="8.5">e.g. Ambegaon Block, Salipur</text>
+      </g>
+
+      <line x1="1270" y1="46" x2="1293" y2="46" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowB5)"/>
+
+      <!-- Level 6: Village / Panchayat -->
+      <g transform="translate(1300, 0)">
+        <rect width="180" height="92" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+        <text x="15" y="22" fill="#a7f3d0" font-size="12" font-weight="900">6. Village / Gram</text>
+        <text x="15" y="40" fill="#ecfdf5" font-size="10">250,000+ Panchayats</text>
+        <text x="15" y="56" fill="#bbf7d0" font-size="9.5">Field-level advisory target</text>
+        <text x="15" y="72" fill="#bbf7d0" font-size="9.5">Offline cache indexed</text>
+        <text x="15" y="84" fill="#86efac" font-size="8.5">CanonicalLocation ID</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrow Down to Multi-Layer Spatial Attribution -->
+  <line x1="800" y1="285" x2="800" y2="310" stroke="#0ea5e9" stroke-width="2" marker-end="url(#arrowB5)"/>
+
+  <!-- ================= TIER 2: MULTI-LAYER SPATIAL ATTRIBUTION & CONDITIONING ================= -->
+  <g transform="translate(40, 315)">
+    <rect width="1520" height="380" rx="12" fill="#0f172a" stroke="#6b21a8" stroke-width="1.5" filter="url(#shadow5)"/>
+    <rect width="1520" height="28" rx="12" fill="#581c87"/>
+    <rect y="18" width="1520" height="10" fill="#581c87"/>
+    <text x="20" y="20" fill="#f3e8ff" font-size="12" font-weight="900" letter-spacing="1">STEP 2: MULTI-LAYER SPATIAL ATTRIBUTION &amp; TOPOGRAPHIC CONDITIONING</text>
+
+    <!-- 6 Spatial Layers (2 rows of 3) -->
+    <g transform="translate(20, 42)">
+      <!-- Layer 1: Nearest AWS -->
+      <g transform="translate(0, 0)">
+        <rect width="470" height="145" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1.2"/>
+        <text x="15" y="24" fill="#93c5fd" font-size="12" font-weight="800">LAYER 1: Nearest Surface AWS / ARG Station</text>
+        <text x="15" y="44" fill="#e2e8f0" font-size="10">• Calculates Haversine distance to nearest 3 IMD/State AWS stations</text>
+        <text x="15" y="60" fill="#e2e8f0" font-size="10">• Real-time ground truth: Temperature, Relative Humidity, 15-min Rain</text>
+        <text x="15" y="76" fill="#e2e8f0" font-size="10">• Computes elevation delta: Δh = Elevation_user - Elevation_station</text>
+        <text x="15" y="94" fill="#94a3b8" font-size="9.5">Code Ref: <tspan fill="#38bdf8">MeteorologicalStationService.kt</tspan></text>
+        <text x="15" y="112" fill="#60a5fa" font-size="9.5" font-weight="600">Weight: High for current conditions (t=0), decaying with distance</text>
+      </g>
+
+      <!-- Layer 2: NWP Grid Point -->
+      <g transform="translate(500, 0)">
+        <rect width="470" height="145" rx="8" fill="#1e293b" stroke="#0ea5e9" stroke-width="1.2"/>
+        <text x="15" y="24" fill="#38bdf8" font-size="12" font-weight="800">LAYER 2: 1-km Downscaled NWP Grid Cell</text>
+        <text x="15" y="44" fill="#e2e8f0" font-size="10">• Bilinear interpolation from nearest 4 grid nodes of high-res model</text>
+        <text x="15" y="60" fill="#e2e8f0" font-size="10">• Provides physics-based diurnal temperature &amp; wind velocity curves</text>
+        <text x="15" y="76" fill="#e2e8f0" font-size="10">• Hourly rainfall probability &amp; convective available potential energy</text>
+        <text x="15" y="94" fill="#94a3b8" font-size="9.5">Code Ref: <tspan fill="#38bdf8">OpenMeteoService.kt &amp; WeatherDataFusionEngine.kt</tspan></text>
+        <text x="15" y="112" fill="#38bdf8" font-size="9.5" font-weight="600">Weight: Primary driver for 3h–48h forecast windows</text>
+      </g>
+
+      <!-- Layer 3: Radar Coverage Cone -->
+      <g transform="translate(1000, 0)">
+        <rect width="480" height="145" rx="8" fill="#1e293b" stroke="#ef4444" stroke-width="1.2"/>
+        <text x="15" y="24" fill="#fca5a5" font-size="12" font-weight="800">LAYER 3: Doppler Radar (DWR) Coverage Cone</text>
+        <text x="15" y="44" fill="#e2e8f0" font-size="10">• Radial distance &amp; azimuth check to 32+ national DWR radars</text>
+        <text x="15" y="60" fill="#e2e8f0" font-size="10">• Coverage categories: Optimal (&lt;100km), Secondary (100–250km), Blind</text>
+        <text x="15" y="76" fill="#e2e8f0" font-size="10">• Direct sampling of instantaneous reflectivity (dBZ) &amp; storm cell track</text>
+        <text x="15" y="94" fill="#94a3b8" font-size="9.5">Code Ref: <tspan fill="#fca5a5">GisRadarRepository.kt</tspan></text>
+        <text x="15" y="112" fill="#ef4444" font-size="9.5" font-weight="600">Weight: Overrides all models for immediate 0–90 min nowcast</text>
+      </g>
+
+      <!-- Row 2 -->
+      <!-- Layer 4: Satellite Pixel -->
+      <g transform="translate(0, 160)">
+        <rect width="470" height="145" rx="8" fill="#1e293b" stroke="#06b6d4" stroke-width="1.2"/>
+        <text x="15" y="24" fill="#67e8f9" font-size="12" font-weight="800">LAYER 4: INSAT-3D Satellite Sub-Pixel Extraction</text>
+        <text x="15" y="44" fill="#e2e8f0" font-size="10">• Pixel footprint over target village: 4km thermal IR brightness temp</text>
+        <text x="15" y="60" fill="#e2e8f0" font-size="10">• Detects rapid convective cloud tops (&lt; -40°C) indicating storm growth</text>
+        <text x="15" y="76" fill="#e2e8f0" font-size="10">• Seamless spatial coverage across remote, hilly &amp; radar-blind regions</text>
+        <text x="15" y="94" fill="#94a3b8" font-size="9.5">Code Ref: <tspan fill="#67e8f9">WeatherDataFusionEngine.kt</tspan></text>
+        <text x="15" y="112" fill="#06b6d4" font-size="9.5" font-weight="600">Weight: Primary gap-filler where radar is obstructed by terrain</text>
+      </g>
+
+      <!-- Layer 5: Terrain & Elevation -->
+      <g transform="translate(500, 160)">
+        <rect width="470" height="145" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.2"/>
+        <text x="15" y="24" fill="#6ee7b7" font-size="12" font-weight="800">LAYER 5: Digital Elevation &amp; Microclimate Terrain</text>
+        <text x="15" y="44" fill="#e2e8f0" font-size="10">• Classifies terrain type: Coastal, Riverine Basin, Plains, Western Ghats, Hills</text>
+        <text x="15" y="60" fill="#e2e8f0" font-size="10">• Dynamic Orographic Lapse Rate: -6.5°C/1000m temp correction</text>
+        <text x="15" y="76" fill="#e2e8f0" font-size="10">• Drainage slope index: Flat plains hold water; steep slopes drain to rivers</text>
+        <text x="15" y="94" fill="#94a3b8" font-size="9.5">Code Ref: <tspan fill="#6ee7b7">CanonicalModels.kt &amp; CanonicalLocationResolver.kt</tspan></text>
+        <text x="15" y="112" fill="#10b981" font-size="9.5" font-weight="600">Weight: Physics-based boundary condition on temperature &amp; run-off</text>
+      </g>
+
+      <!-- Layer 6: Hazard Zones -->
+      <g transform="translate(1000, 160)">
+        <rect width="480" height="145" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="1.2"/>
+        <text x="15" y="24" fill="#fde68a" font-size="12" font-weight="800">LAYER 6: Historical Hazard Zones &amp; River Gauges</text>
+        <text x="15" y="44" fill="#e2e8f0" font-size="10">• Spatial mapping to CWC River Danger Gauges &amp; Flood Prone Basins</text>
+        <text x="15" y="60" fill="#e2e8f0" font-size="10">• Cyclone Coastal Proximity Buffer (0–50km high storm surge risk)</text>
+        <text x="15" y="76" fill="#e2e8f0" font-size="10">• Urban low-lying drainage depression catalog (underpasses &amp; basins)</text>
+        <text x="15" y="94" fill="#94a3b8" font-size="9.5">Code Ref: <tspan fill="#fde68a">AuthoritativeHydrologyRegistry.kt &amp; HazardAndFloodEngine.kt</tspan></text>
+        <text x="15" y="112" fill="#f59e0b" font-size="9.5" font-weight="600">Weight: Critical threshold gating for automated early warning alerts</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrow Down to Output -->
+  <line x1="800" y1="695" x2="800" y2="725" stroke="#a855f7" stroke-width="2" marker-end="url(#arrowP5)"/>
+
+  <!-- ================= TIER 3: SYNTHESIZED HYPERLOCAL WEATHER INTELLIGENCE ================= -->
+  <g transform="translate(40, 730)">
+    <rect width="1520" height="215" rx="12" fill="#052e16" stroke="#16a34a" stroke-width="2" filter="url(#shadow5)"/>
+    <rect width="1520" height="28" rx="12" fill="#15803d"/>
+    <rect y="18" width="1520" height="10" fill="#15803d"/>
+    <text x="20" y="20" fill="#ffffff" font-size="12" font-weight="900" letter-spacing="1">OUTPUT: SYNTHESIZED HYPERLOCAL WEATHER INTELLIGENCE (VILLAGE-LEVEL RESOLUTION)</text>
+
+    <!-- 4 Concrete Outcome Modules -->
+    <g transform="translate(20, 42)">
+      <g transform="translate(0, 0)">
+        <rect width="350" height="145" rx="8" fill="#14532d" stroke="#4ade80" stroke-width="1.2"/>
+        <text x="15" y="24" fill="#86efac" font-size="12" font-weight="800">1. Precision Microclimate Forecast</text>
+        <text x="15" y="44" fill="#f0fdf4" font-size="10">• Exact 2m Temperature adjusted for local altitude</text>
+        <text x="15" y="60" fill="#f0fdf4" font-size="10">• Village-specific rain probability (0–100%)</text>
+        <text x="15" y="76" fill="#f0fdf4" font-size="10">• Local wind gust speed &amp; squall line vector</text>
+        <text x="15" y="94" fill="#bbf7d0" font-size="9.5">Update Cycle: 15-min nowcast, 1-h forecast</text>
+        <text x="15" y="114" fill="#4ade80" font-size="9.5" font-weight="700">Eliminates generic state-wide averages</text>
+      </g>
+
+      <g transform="translate(370, 0)">
+        <rect width="365" height="145" rx="8" fill="#14532d" stroke="#4ade80" stroke-width="1.2"/>
+        <text x="15" y="24" fill="#86efac" font-size="12" font-weight="800">2. Localized Inundation &amp; Flood Score</text>
+        <text x="15" y="44" fill="#f0fdf4" font-size="10">• Direct coupling to upstream river basin rainfall</text>
+        <text x="15" y="60" fill="#f0fdf4" font-size="10">• Inundation depth estimate (e.g. 0.2m – 0.8m)</text>
+        <text x="15" y="76" fill="#f0fdf4" font-size="10">• Flash flood onset timing (e.g. in 45 minutes)</text>
+        <text x="15" y="94" fill="#bbf7d0" font-size="9.5">Distinguishes rain from drainage saturation</text>
+        <text x="15" y="114" fill="#4ade80" font-size="9.5" font-weight="700">Evacuation advisory for riverine tolas</text>
+      </g>
+
+      <g transform="translate(755, 0)">
+        <rect width="365" height="145" rx="8" fill="#14532d" stroke="#4ade80" stroke-width="1.2"/>
+        <text x="15" y="24" fill="#86efac" font-size="12" font-weight="800">3. Krishi Agromet Spray &amp; Sowing Window</text>
+        <text x="15" y="44" fill="#f0fdf4" font-size="10">• Tailored to dominant crop in Panchayat block</text>
+        <text x="15" y="60" fill="#f0fdf4" font-size="10">• Evaluates pesticide wash-off risk vs spray drift</text>
+        <text x="15" y="76" fill="#f0fdf4" font-size="10">• Soil moisture retention &amp; irrigation scheduling</text>
+        <text x="15" y="94" fill="#bbf7d0" font-size="9.5">Delivered via KrishiGPT in local dialect</text>
+        <text x="15" y="114" fill="#4ade80" font-size="9.5" font-weight="700">Directly saves farmer chemical costs</text>
+      </g>
+
+      <g transform="translate(1140, 0)">
+        <rect width="340" height="145" rx="8" fill="#14532d" stroke="#4ade80" stroke-width="1.2"/>
+        <text x="15" y="24" fill="#86efac" font-size="12" font-weight="800">4. Offline Rural Cache Indexing</text>
+        <text x="15" y="44" fill="#f0fdf4" font-size="10">• Persisted automatically to Room Database</text>
+        <text x="15" y="60" fill="#f0fdf4" font-size="10">• Pre-computed 48-hour outlook available offline</text>
+        <text x="15" y="76" fill="#f0fdf4" font-size="10">• Sync timestamp displayed to maintain trust</text>
+        <text x="15" y="94" fill="#bbf7d0" font-size="9.5">Entity: rural_offline_cache table</text>
+        <text x="15" y="114" fill="#4ade80" font-size="9.5" font-weight="700">Full functionality during network outage</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= FOOTER ================= -->
+  <g transform="translate(40, 995)">
+    <line x1="0" y1="0" x2="1520" y2="0" stroke="#334155" stroke-width="1"/>
+    <text x="0" y="25" fill="#38bdf8" font-size="12" font-weight="800">WeatherGPT | SIH 2026 | PS-68 | Ministry of Earth Sciences</text>
+    <text x="760" y="25" fill="#facc15" font-size="12" font-weight="700" text-anchor="middle">Data → Intelligence → Forecast → Risk → Action</text>
+    <text x="1520" y="25" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">Production Implementation • Zero-Hallucination Architecture</text>
+  </g>
+</svg>

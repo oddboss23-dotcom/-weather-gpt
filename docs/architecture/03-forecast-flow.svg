@@ -1,0 +1,268 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1050" width="100%" height="100%" style="background:#0b0f19; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="50%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#0a1128"/>
+    </linearGradient>
+    <linearGradient id="window1Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="window2Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="window3Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c4a6e"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <marker id="arrowT" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#14b8a6"/>
+    </marker>
+    <marker id="arrowC" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1050" fill="url(#bgGrad3)"/>
+
+  <!-- Top Title Banner -->
+  <rect x="40" y="30" width="1520" height="80" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow3)"/>
+  <text x="70" y="66" fill="#f8fafc" font-size="22" font-weight="800">DIAGRAM 3: 24H / 48H MULTI-HORIZON FORECAST ARCHITECTURE</text>
+  <text x="70" y="90" fill="#94a3b8" font-size="13">Tri-Window Forecasting Hierarchy: 0–3h Nowcast • 3–24h Short-Range • 24–48h Extended Ensemble</text>
+  <rect x="1270" y="48" width="260" height="42" rx="6" fill="#0f172a" stroke="#14b8a6" stroke-width="1.2"/>
+  <text x="1400" y="74" fill="#2dd4bf" font-size="12" font-weight="700" text-anchor="middle">TEMPORAL SCALE COUPLING</text>
+
+  <!-- ================= THREE FORECAST WINDOWS (Columns) ================= -->
+
+  <!-- WINDOW 1: 0–3 HOURS (NOWCAST) -->
+  <g transform="translate(40, 130)">
+    <rect width="480" height="520" rx="12" fill="url(#window1Grad)" stroke="#6366f1" stroke-width="2" filter="url(#shadow3)"/>
+    <rect width="480" height="42" rx="12" fill="#3730a3"/>
+    <rect y="26" width="480" height="16" fill="#3730a3"/>
+    <text x="20" y="28" fill="#e0e7ff" font-size="14" font-weight="900" letter-spacing="0.5">WINDOW 1: 0–3 HOURS (NOWCASTING)</text>
+
+    <!-- Content -->
+    <g transform="translate(20, 56)">
+      <!-- Inputs Container -->
+      <rect width="440" height="180" rx="8" fill="#0f172a" stroke="#4338ca" stroke-width="1"/>
+      <text x="15" y="22" fill="#a5b4fc" font-size="12" font-weight="800">OBSERVATIONAL INPUTS (REAL-TIME)</text>
+
+      <rect x="15" y="32" width="410" height="40" rx="5" fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/>
+      <text x="12" y="18" transform="translate(15, 32)" fill="#e0e7ff" font-size="11" font-weight="700">📡 Doppler Weather Radar (DWR)</text>
+      <text x="12" y="30" transform="translate(15, 32)" fill="#c7d2fe" font-size="9.5">Reflectivity (dBZ) &gt; 35 dBZ • TITAN Rain Cell Vectors</text>
+
+      <rect x="15" y="78" width="410" height="40" rx="5" fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/>
+      <text x="12" y="18" transform="translate(15, 78)" fill="#e0e7ff" font-size="11" font-weight="700">🛰️ INSAT-3D / 3DR Satellite</text>
+      <text x="12" y="30" transform="translate(15, 78)" fill="#c7d2fe" font-size="9.5">Thermal IR Cloud Top &lt; -40°C • Rapid Motion Vector</text>
+
+      <rect x="15" y="124" width="410" height="42" rx="5" fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/>
+      <text x="12" y="18" transform="translate(15, 124)" fill="#e0e7ff" font-size="11" font-weight="700">⚡ Surface AWS / Rain Gauges</text>
+      <text x="12" y="31" transform="translate(15, 124)" fill="#c7d2fe" font-size="9.5">Ground Truth Calibration (15-min Telemetry)</text>
+
+      <!-- Arrow Down -->
+      <line x1="220" y1="218" x2="220" y2="242" stroke="#818cf8" stroke-width="2" marker-end="url(#arrowT)"/>
+
+      <!-- Processing Engine -->
+      <g transform="translate(0, 246)">
+        <rect width="440" height="95" rx="8" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+        <text x="15" y="22" fill="#c7d2fe" font-size="12" font-weight="800">NOWCAST EXTRAPOLATION ENGINE</text>
+        <text x="15" y="40" fill="#e2e8f0" font-size="10">• Optical Flow &amp; Rain Cell Centroid Advection</text>
+        <text x="15" y="56" fill="#e2e8f0" font-size="10">• Z-R Power Law: Z = 200 * R^1.6 (Instantaneous mm/h)</text>
+        <text x="15" y="72" fill="#e2e8f0" font-size="10">• Convective storm initiation &amp; lightning risk</text>
+        <text x="15" y="86" fill="#818cf8" font-size="9">Latency: &lt; 2 minutes • Temporal Step: 15-minute intervals</text>
+      </g>
+
+      <!-- Output Box -->
+      <g transform="translate(0, 355)">
+        <rect width="440" height="95" rx="8" fill="#312e81" stroke="#a5b4fc" stroke-width="2"/>
+        <text x="15" y="22" fill="#ffffff" font-size="13" font-weight="900">OUTPUT: HIGH-PRECISION NOWCAST</text>
+        <text x="15" y="44" fill="#e0e7ff" font-size="11">✓ Immediate Rain Cell Arrival ETA (± 10 mins)</text>
+        <text x="15" y="62" fill="#e0e7ff" font-size="11">✓ Peak Intensity Forecast (mm/h) for next 180 mins</text>
+        <text x="15" y="80" fill="#e0e7ff" font-size="11">✓ Micro-burst &amp; Squall Wind Gust Thresholds</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- WINDOW 2: 3–24 HOURS (SHORT-RANGE FORECAST) -->
+  <g transform="translate(560, 130)">
+    <rect width="480" height="520" rx="12" fill="url(#window2Grad)" stroke="#10b981" stroke-width="2.5" filter="url(#shadow3)"/>
+    <rect width="480" height="42" rx="12" fill="#065f46"/>
+    <rect y="26" width="480" height="16" fill="#065f46"/>
+    <text x="20" y="28" fill="#d1fae5" font-size="14" font-weight="900" letter-spacing="0.5">WINDOW 2: 3–24 HOURS (SHORT-RANGE)</text>
+    <rect x="360" y="8" width="105" height="26" rx="4" fill="#047857"/>
+    <text x="412" y="25" fill="#a7f3d0" font-size="10" font-weight="800" text-anchor="middle">CORE PATH</text>
+
+    <!-- Content -->
+    <g transform="translate(20, 56)">
+      <!-- Inputs Container -->
+      <rect width="440" height="180" rx="8" fill="#0f172a" stroke="#047857" stroke-width="1"/>
+      <text x="15" y="22" fill="#6ee7b7" font-size="12" font-weight="800">MULTI-SOURCE FUSED INPUTS</text>
+
+      <rect x="15" y="32" width="410" height="40" rx="5" fill="#064e3b" stroke="#10b981" stroke-width="1"/>
+      <text x="12" y="18" transform="translate(15, 32)" fill="#f0fdf4" font-size="11" font-weight="700">🌐 High-Resolution NWP (Open-Meteo)</text>
+      <text x="12" y="30" transform="translate(15, 32)" fill="#a7f3d0" font-size="9.5">1-km Downscaled Surface Grid • Hourly Timesteps</text>
+
+      <rect x="15" y="78" width="410" height="40" rx="5" fill="#064e3b" stroke="#10b981" stroke-width="1"/>
+      <text x="12" y="18" transform="translate(15, 78)" fill="#f0fdf4" font-size="11" font-weight="700">🛰️ Radar + Satellite Synoptic State</text>
+      <text x="12" y="30" transform="translate(15, 78)" fill="#a7f3d0" font-size="9.5">Regional Moisture Flux &amp; Cloud Cover Persistence</text>
+
+      <rect x="15" y="124" width="410" height="42" rx="5" fill="#064e3b" stroke="#10b981" stroke-width="1"/>
+      <text x="12" y="18" transform="translate(15, 124)" fill="#f0fdf4" font-size="11" font-weight="700">📊 Calibrated Surface Observations</text>
+      <text x="12" y="31" transform="translate(15, 124)" fill="#a7f3d0" font-size="9.5">Diurnal Temperature Curve &amp; Barometric Tendency</text>
+
+      <!-- Arrow Down -->
+      <line x1="220" y1="218" x2="220" y2="242" stroke="#34d399" stroke-width="2" marker-end="url(#arrowT)"/>
+
+      <!-- Processing Engine -->
+      <g transform="translate(0, 246)">
+        <rect width="440" height="95" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+        <text x="15" y="22" fill="#6ee7b7" font-size="12" font-weight="800">SPATIAL-TEMPORAL FUSION ENGINE</text>
+        <text x="15" y="40" fill="#e2e8f0" font-size="10">• Observation Nudging &amp; NWP Bias Correction</text>
+        <text x="15" y="56" fill="#e2e8f0" font-size="10">• Diurnal Cycle Modeling (Solar Noon Peak &amp; Night Min)</text>
+        <text x="15" y="72" fill="#e2e8f0" font-size="10">• Orographic Rain Enhancement over Ghats / Slopes</text>
+        <text x="15" y="86" fill="#34d399" font-size="9">Resolution: 1-hour intervals • 24 Discrete Time Slices</text>
+      </g>
+
+      <!-- Output Box -->
+      <g transform="translate(0, 355)">
+        <rect width="440" height="95" rx="8" fill="#064e3b" stroke="#6ee7b7" stroke-width="2"/>
+        <text x="15" y="22" fill="#ffffff" font-size="13" font-weight="900">OUTPUT: 24-HOUR HOURLY FORECAST</text>
+        <text x="15" y="44" fill="#ecfdf5" font-size="11">✓ Hourly Rain Probabilities (0–100%) &amp; Amounts (mm)</text>
+        <text x="15" y="62" fill="#ecfdf5" font-size="11">✓ Min/Max Temperatures &amp; Relative Humidity</text>
+        <text x="15" y="80" fill="#ecfdf5" font-size="11">✓ Safe Agricultural Spraying Windows for Farmers</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- WINDOW 3: 24–48 HOURS (EXTENDED FORECAST) -->
+  <g transform="translate(1080, 130)">
+    <rect width="480" height="520" rx="12" fill="url(#window3Grad)" stroke="#0ea5e9" stroke-width="2.5" filter="url(#shadow3)"/>
+    <rect width="480" height="42" rx="12" fill="#0369a1"/>
+    <rect y="26" width="480" height="16" fill="#0369a1"/>
+    <text x="20" y="28" fill="#e0f2fe" font-size="14" font-weight="900" letter-spacing="0.5">WINDOW 3: 24–48 HOURS (EXTENDED)</text>
+    <rect x="360" y="8" width="105" height="26" rx="4" fill="#0284c7"/>
+    <text x="412" y="25" fill="#bae6fd" font-size="10" font-weight="800" text-anchor="middle">SYNOPTIC</text>
+
+    <!-- Content -->
+    <g transform="translate(20, 56)">
+      <!-- Inputs Container -->
+      <rect width="440" height="180" rx="8" fill="#0f172a" stroke="#0284c7" stroke-width="1"/>
+      <text x="15" y="22" fill="#38bdf8" font-size="12" font-weight="800">GLOBAL NWP &amp; ENSEMBLE INPUTS</text>
+
+      <rect x="15" y="32" width="410" height="40" rx="5" fill="#0c4a6e" stroke="#0ea5e9" stroke-width="1"/>
+      <text x="12" y="18" transform="translate(15, 32)" fill="#f0f9ff" font-size="11" font-weight="700">🌍 Multi-Model Ensemble (GFS / ECMWF)</text>
+      <text x="12" y="30" transform="translate(15, 32)" fill="#bae6fd" font-size="9.5">Global Medium-Range Deterministic &amp; Perturbed Runs</text>
+
+      <rect x="15" y="78" width="410" height="40" rx="5" fill="#0c4a6e" stroke="#0ea5e9" stroke-width="1"/>
+      <text x="12" y="18" transform="translate(15, 78)" fill="#f0f9ff" font-size="11" font-weight="700">🤝 Model Agreement &amp; Spread Analysis</text>
+      <text x="12" y="30" transform="translate(15, 78)" fill="#bae6fd" font-size="9.5">Inter-model variance (Ensemble standard deviation)</text>
+
+      <rect x="15" y="124" width="410" height="42" rx="5" fill="#0c4a6e" stroke="#0ea5e9" stroke-width="1"/>
+      <text x="12" y="18" transform="translate(15, 124)" fill="#f0f9ff" font-size="11" font-weight="700">📜 Regional Historical Climate Baselines</text>
+      <text x="12" y="31" transform="translate(15, 124)" fill="#bae6fd" font-size="9.5">Monthly normal temperatures &amp; monsoon regimes</text>
+
+      <!-- Arrow Down -->
+      <line x1="220" y1="218" x2="220" y2="242" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowT)"/>
+
+      <!-- Processing Engine -->
+      <g transform="translate(0, 246)">
+        <rect width="440" height="95" rx="8" fill="#1e293b" stroke="#0ea5e9" stroke-width="1.5"/>
+        <text x="15" y="22" fill="#38bdf8" font-size="12" font-weight="800">SYNOPTIC TREND &amp; SPREAD ENGINE</text>
+        <text x="15" y="40" fill="#e2e8f0" font-size="10">• Trough / Ridge Movement &amp; Monsoon Low Pressure</text>
+        <text x="15" y="56" fill="#e2e8f0" font-size="10">• Model Consensus Probability Weighting</text>
+        <text x="15" y="72" fill="#e2e8f0" font-size="10">• Climatological Sanity Boundaries (Filters outliers)</text>
+        <text x="15" y="86" fill="#38bdf8" font-size="9">Resolution: 3-hour / 6-hour chunks • Synoptic Outlook</text>
+      </g>
+
+      <!-- Output Box -->
+      <g transform="translate(0, 355)">
+        <rect width="440" height="95" rx="8" fill="#0c4a6e" stroke="#38bdf8" stroke-width="2"/>
+        <text x="15" y="22" fill="#ffffff" font-size="13" font-weight="900">OUTPUT: 48-HOUR SYNOPTIC OUTLOOK</text>
+        <text x="15" y="44" fill="#e0f2fe" font-size="11">✓ Day 2 Rain Intensity Probability &amp; Accumulation</text>
+        <text x="15" y="62" fill="#e0f2fe" font-size="11">✓ Synoptic Trend (Warming, Heatwave, Cold Surge)</text>
+        <text x="15" y="80" fill="#e0f2fe" font-size="11">✓ Advance Disaster Warning (River Catchment Runoff)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= CONVERGENCE TIER (Middle-Bottom) ================= -->
+  <!-- Convergence Arrows from 3 Windows -->
+  <path d="M 280 650 L 280 675 L 750 675 L 750 700" stroke="#818cf8" stroke-width="2.5" fill="none"/>
+  <path d="M 800 650 L 800 700" stroke="#34d399" stroke-width="3" fill="none"/>
+  <path d="M 1320 650 L 1320 675 L 850 675 L 850 700" stroke="#38bdf8" stroke-width="2.5" fill="none"/>
+  <circle cx="800" cy="700" r="4" fill="#38bdf8"/>
+
+  <!-- Combined Confidence & Forecast Bust Engine -->
+  <g transform="translate(40, 710)">
+    <rect width="1520" height="115" rx="12" fill="#0f172a" stroke="#f59e0b" stroke-width="2" filter="url(#shadow3)"/>
+    <rect width="1520" height="28" rx="12" fill="#78350f"/>
+    <rect y="18" width="1520" height="10" fill="#78350f"/>
+    <text x="20" y="20" fill="#fef3c7" font-size="12" font-weight="900" letter-spacing="1">SYNTHESIS &amp; UNCERTAINTY QUANTIFICATION: FORECAST BUST DETECTOR &amp; CONFIDENCE ENGINE</text>
+
+    <g transform="translate(20, 38)">
+      <!-- Bust Detector -->
+      <rect width="470" height="65" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="1.2"/>
+      <text x="15" y="20" fill="#fcd34d" font-size="11" font-weight="800">Forecast Bust Detection Logic</text>
+      <text x="15" y="36" fill="#e2e8f0" font-size="10">Compares observed AWS rain/temp vs. predicted values in real-time.</text>
+      <text x="15" y="52" fill="#fde68a" font-size="9.5">Trigger: If divergence &gt; 3.0°C or rain starts unexpectedly → Flag BUST RISK</text>
+
+      <!-- Disagreement Spread -->
+      <g transform="translate(490, 0)">
+        <rect width="480" height="65" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="1.2"/>
+        <text x="15" y="20" fill="#fcd34d" font-size="11" font-weight="800">Model Disagreement Spread (Uncertainty)</text>
+        <text x="15" y="36" fill="#e2e8f0" font-size="10">Spread = Standard deviation of rainfall predictions across models.</text>
+        <text x="15" y="52" fill="#fde68a" font-size="9.5">Output: LOW (&lt;10%), MEDIUM (10–30%), or HIGH (&gt;30%) uncertainty</text>
+      </g>
+
+      <!-- Confidence Score -->
+      <g transform="translate(990, 0)">
+        <rect width="490" height="65" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1.2"/>
+        <text x="15" y="20" fill="#6ee7b7" font-size="11" font-weight="800">Probabilistic Confidence Score (0–100%)</text>
+        <text x="15" y="36" fill="#e2e8f0" font-size="10">Calculated deterministically: Data Freshness + Radar Proximity - Spread</text>
+        <text x="15" y="52" fill="#a7f3d0" font-size="9.5">Example: 94% (High Confidence, Recent AWS + DWR coverage)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrow down to Snapshot -->
+  <line x1="800" y1="825" x2="800" y2="845" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrowC)"/>
+
+  <!-- ================= FINAL CANONICAL SNAPSHOT CONTAINER ================= -->
+  <g transform="translate(40, 850)">
+    <rect width="1520" height="95" rx="12" fill="#0f172a" stroke="#0ea5e9" stroke-width="2" filter="url(#shadow3)"/>
+    <rect width="1520" height="26" rx="12" fill="#0369a1"/>
+    <rect y="16" width="1520" height="10" fill="#0369a1"/>
+    <text x="20" y="19" fill="#ffffff" font-size="13" font-weight="900" letter-spacing="1">CANONICAL WEATHER SNAPSHOT: MULTI-HORIZON PAYLOAD</text>
+
+    <g transform="translate(20, 36)">
+      <rect width="350" height="48" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+      <text x="15" y="19" fill="#38bdf8" font-size="11" font-weight="700">0–3h Nowcast Array</text>
+      <text x="15" y="35" fill="#94a3b8" font-size="10">15-min radar-driven reflectivity &amp; rain ETA</text>
+
+      <rect x="370" width="370" height="48" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1"/>
+      <text x="15" y="19" transform="translate(370, 0)" fill="#34d399" font-size="11" font-weight="700">3–24h Hourly Forecast Array</text>
+      <text x="15" y="35" transform="translate(370, 0)" fill="#94a3b8" font-size="10">24 hourly items: Temp, Rain mm, Wind, RH, UV</text>
+
+      <rect x="760" width="360" height="48" rx="6" fill="#1e293b" stroke="#0ea5e9" stroke-width="1"/>
+      <text x="15" y="19" transform="translate(760, 0)" fill="#38bdf8" font-size="11" font-weight="700">24–48h Daily Forecast Array</text>
+      <text x="15" y="35" transform="translate(760, 0)" fill="#94a3b8" font-size="10">Day 1 &amp; Day 2 synoptic extremes &amp; rain sums</text>
+
+      <rect x="1140" width="340" height="48" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="1"/>
+      <text x="15" y="19" transform="translate(1140, 0)" fill="#fbbf24" font-size="11" font-weight="700">Verification &amp; Confidence Metadata</text>
+      <text x="15" y="35" transform="translate(1140, 0)" fill="#94a3b8" font-size="10">scorePercent: Int • uncertainty: Level • basis: List</text>
+    </g>
+  </g>
+
+  <!-- ================= FOOTER ================= -->
+  <g transform="translate(40, 995)">
+    <line x1="0" y1="0" x2="1520" y2="0" stroke="#334155" stroke-width="1"/>
+    <text x="0" y="25" fill="#38bdf8" font-size="12" font-weight="800">WeatherGPT | SIH 2026 | PS-68 | Ministry of Earth Sciences</text>
+    <text x="760" y="25" fill="#facc15" font-size="12" font-weight="700" text-anchor="middle">Data → Intelligence → Forecast → Risk → Action</text>
+    <text x="1520" y="25" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">Production Implementation • Zero-Hallucination Architecture</text>
+  </g>
+</svg>

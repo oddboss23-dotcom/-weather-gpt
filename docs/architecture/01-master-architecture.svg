@@ -1,0 +1,455 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="100%" height="100%" style="background:#0b0f19; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+
+    <!-- Marker Arrow -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrowCyan" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#06b6d4"/>
+    </marker>
+    <marker id="arrowTeal" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#14b8a6"/>
+    </marker>
+    <marker id="arrowPurple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#a855f7"/>
+    </marker>
+    <marker id="arrowViolet" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#8b5cf6"/>
+    </marker>
+
+    <!-- Card Drop Shadows -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1100" fill="url(#bgGrad)"/>
+
+  <!-- Top Banner -->
+  <rect x="40" y="30" width="1520" height="80" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="70" y="68" fill="#f8fafc" font-size="24" font-weight="800" letter-spacing="0.5">DIAGRAM 1: MASTER SYSTEM ARCHITECTURE</text>
+  <text x="70" y="93" fill="#94a3b8" font-size="14" font-weight="500">WeatherGPT — End-to-End Meteorological Intelligence, Hazard Synthesis &amp; Decision Support Platform</text>
+  
+  <rect x="1270" y="48" width="260" height="42" rx="8" fill="#0f172a" stroke="#0ea5e9" stroke-width="1.2"/>
+  <circle cx="1290" cy="69" r="6" fill="#10b981"/>
+  <text x="1308" y="74" fill="#38bdf8" font-size="13" font-weight="700">SIH 2026 | PROBLEM PS-68</text>
+
+  <!-- ================= ZONE 1: DATA SOURCES (Blue Group) ================= -->
+  <g transform="translate(40, 130)">
+    <rect width="1520" height="95" rx="10" fill="#0f172a" stroke="#1d4ed8" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect width="1520" height="28" rx="10" fill="#1e3a8a"/>
+    <rect y="18" width="1520" height="10" fill="#1e3a8a"/>
+    <text x="20" y="20" fill="#93c5fd" font-size="12" font-weight="800" letter-spacing="1">TIER 1: MULTI-MODAL DATA SOURCES (METEOROLOGICAL, HYDROLOGICAL &amp; HAZARD TELEMETRY)</text>
+
+    <!-- Source Boxes -->
+    <g transform="translate(15, 38)">
+      <rect width="135" height="46" rx="6" fill="#1e293b" stroke="#2563eb" stroke-width="1"/>
+      <text x="67" y="22" fill="#bfdbfe" font-size="11" font-weight="700" text-anchor="middle">IMD Observations</text>
+      <text x="67" y="37" fill="#64748b" font-size="9" text-anchor="middle">Surface Met Synoptic</text>
+
+      <rect x="148" width="135" height="46" rx="6" fill="#1e293b" stroke="#2563eb" stroke-width="1"/>
+      <text x="215" y="22" fill="#bfdbfe" font-size="11" font-weight="700" text-anchor="middle">IMD Warnings</text>
+      <text x="215" y="37" fill="#64748b" font-size="9" text-anchor="middle">District Bulletins (CAP)</text>
+
+      <rect x="296" width="135" height="46" rx="6" fill="#1e293b" stroke="#2563eb" stroke-width="1"/>
+      <text x="363" y="22" fill="#bfdbfe" font-size="11" font-weight="700" text-anchor="middle">AWS / ARG Networks</text>
+      <text x="363" y="37" fill="#64748b" font-size="9" text-anchor="middle">Surface Rain Gauges</text>
+
+      <rect x="444" width="145" height="46" rx="6" fill="#1e293b" stroke="#2563eb" stroke-width="1"/>
+      <text x="516" y="22" fill="#bfdbfe" font-size="11" font-weight="700" text-anchor="middle">Doppler Radar (DWR)</text>
+      <text x="516" y="37" fill="#64748b" font-size="9" text-anchor="middle">Reflectivity (dBZ) / Rain</text>
+
+      <rect x="602" width="140" height="46" rx="6" fill="#1e293b" stroke="#2563eb" stroke-width="1"/>
+      <text x="672" y="22" fill="#bfdbfe" font-size="11" font-weight="700" text-anchor="middle">INSAT-3D / GPM</text>
+      <text x="672" y="37" fill="#64748b" font-size="9" text-anchor="middle">Cloud Top Temp / Vector</text>
+
+      <rect x="755" width="145" height="46" rx="6" fill="#1e293b" stroke="#2563eb" stroke-width="1"/>
+      <text x="827" y="22" fill="#bfdbfe" font-size="11" font-weight="700" text-anchor="middle">GFS / ECMWF NWP</text>
+      <text x="827" y="37" fill="#64748b" font-size="9" text-anchor="middle">Global Ensemble Grids</text>
+
+      <rect x="913" width="140" height="46" rx="6" fill="#1e293b" stroke="#2563eb" stroke-width="1"/>
+      <text x="983" y="22" fill="#bfdbfe" font-size="11" font-weight="700" text-anchor="middle">CWC Hydrology</text>
+      <text x="983" y="37" fill="#64748b" font-size="9" text-anchor="middle">River Gauge &amp; Danger Lvl</text>
+
+      <rect x="1066" width="135" height="46" rx="6" fill="#1e293b" stroke="#2563eb" stroke-width="1"/>
+      <text x="1133" y="22" fill="#bfdbfe" font-size="11" font-weight="700" text-anchor="middle">Official Cyclone Data</text>
+      <text x="1133" y="37" fill="#64748b" font-size="9" text-anchor="middle">IMD Cyclone Track/Vitals</text>
+
+      <rect x="1214" width="135" height="46" rx="6" fill="#1e293b" stroke="#2563eb" stroke-width="1"/>
+      <text x="1281" y="22" fill="#bfdbfe" font-size="11" font-weight="700" text-anchor="middle">Historical Archive</text>
+      <text x="1281" y="37" fill="#64748b" font-size="9" text-anchor="middle">Climatological Baselines</text>
+
+      <rect x="1362" width="130" height="46" rx="6" fill="#1e293b" stroke="#2563eb" stroke-width="1"/>
+      <text x="1427" y="22" fill="#bfdbfe" font-size="11" font-weight="700" text-anchor="middle">Open-Meteo High-Res</text>
+      <text x="1427" y="37" fill="#64748b" font-size="9" text-anchor="middle">Configured Ingest API</text>
+    </g>
+  </g>
+
+  <!-- Arrow down to Ingestion -->
+  <line x1="800" y1="225" x2="800" y2="248" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowCyan)"/>
+
+  <!-- ================= ZONE 2: INGESTION & VALIDATION (Cyan Group) ================= -->
+  <g transform="translate(40, 250)">
+    <rect width="1520" height="75" rx="10" fill="#082f49" stroke="#0284c7" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect width="1520" height="24" rx="10" fill="#0369a1"/>
+    <rect y="14" width="1520" height="10" fill="#0369a1"/>
+    <text x="20" y="17" fill="#bae6fd" font-size="12" font-weight="800" letter-spacing="1">TIER 2: DATA INGESTION GATEWAY &amp; QUALITY VALIDATION ENGINE</text>
+
+    <g transform="translate(15, 32)">
+      <!-- Ingestion Blocks -->
+      <rect width="155" height="34" rx="5" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1"/>
+      <text x="77" y="21" fill="#e0f2fe" font-size="10" font-weight="600" text-anchor="middle">Source Adapters (IMD/CWC)</text>
+
+      <rect x="165" width="155" height="34" rx="5" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1"/>
+      <text x="242" y="21" fill="#e0f2fe" font-size="10" font-weight="600" text-anchor="middle">Real-Time &amp; Sched Fetchers</text>
+
+      <rect x="330" width="150" height="34" rx="5" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1"/>
+      <text x="405" y="21" fill="#e0f2fe" font-size="10" font-weight="600" text-anchor="middle">Rate Limiting &amp; Retries</text>
+
+      <rect x="490" width="150" height="34" rx="5" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1"/>
+      <text x="565" y="21" fill="#e0f2fe" font-size="10" font-weight="600" text-anchor="middle">Source Health Monitoring</text>
+
+      <line x1="655" y1="17" x2="685" y2="17" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#arrowCyan)"/>
+
+      <!-- Validation Blocks -->
+      <rect x="695" width="150" height="34" rx="5" fill="#075985" stroke="#7dd3fc" stroke-width="1"/>
+      <text x="770" y="21" fill="#ffffff" font-size="10" font-weight="600" text-anchor="middle">Schema &amp; Timestamp Check</text>
+
+      <rect x="855" width="155" height="34" rx="5" fill="#075985" stroke="#7dd3fc" stroke-width="1"/>
+      <text x="932" y="21" fill="#ffffff" font-size="10" font-weight="600" text-anchor="middle">Spatial Geo-Resolution</text>
+
+      <rect x="1020" width="155" height="34" rx="5" fill="#075985" stroke="#7dd3fc" stroke-width="1"/>
+      <text x="1097" y="21" fill="#ffffff" font-size="10" font-weight="600" text-anchor="middle">Freshness &amp; Stale Detection</text>
+
+      <rect x="1185" width="155" height="34" rx="5" fill="#075985" stroke="#7dd3fc" stroke-width="1"/>
+      <text x="1262" y="21" fill="#ffffff" font-size="10" font-weight="600" text-anchor="middle">Unit Normalization (SI/IMD)</text>
+
+      <rect x="1350" width="140" height="34" rx="5" fill="#075985" stroke="#7dd3fc" stroke-width="1"/>
+      <text x="1420" y="21" fill="#ffffff" font-size="10" font-weight="600" text-anchor="middle">Data Quality Flagging</text>
+    </g>
+  </g>
+
+  <!-- Arrow down to Core Engine -->
+  <line x1="800" y1="325" x2="800" y2="348" stroke="#a855f7" stroke-width="2" marker-end="url(#arrowPurple)"/>
+
+  <!-- ================= ZONE 3: WEATHER INTELLIGENCE & FUSION (Purple Group) ================= -->
+  <g transform="translate(40, 350)">
+    <rect width="1520" height="85" rx="10" fill="#2e1065" stroke="#9333ea" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect width="1520" height="24" rx="10" fill="#581c87"/>
+    <rect y="14" width="1520" height="10" fill="#581c87"/>
+    <text x="20" y="17" fill="#f3e8ff" font-size="12" font-weight="800" letter-spacing="1">TIER 3: WEATHER INTELLIGENCE ENGINE &amp; MULTI-SOURCE FUSION</text>
+
+    <g transform="translate(15, 34)">
+      <rect width="180" height="42" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+      <text x="90" y="20" fill="#e9d5ff" font-size="11" font-weight="700" text-anchor="middle">Hyperlocal Location Engine</text>
+      <text x="90" y="35" fill="#a855f7" font-size="9" text-anchor="middle">GPS → District → Block → Village</text>
+
+      <rect x="195" width="175" height="42" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+      <text x="282" y="20" fill="#e9d5ff" font-size="11" font-weight="700" text-anchor="middle">Observation Fusion</text>
+      <text x="282" y="35" fill="#a855f7" font-size="9" text-anchor="middle">AWS + ARG + Synoptic Weights</text>
+
+      <rect x="385" width="175" height="42" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+      <text x="472" y="20" fill="#e9d5ff" font-size="11" font-weight="700" text-anchor="middle">Radar Echo Fusion</text>
+      <text x="472" y="35" fill="#a855f7" font-size="9" text-anchor="middle">DWR Reflectivity &amp; Velocity VAD</text>
+
+      <rect x="575" width="175" height="42" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+      <text x="662" y="20" fill="#e9d5ff" font-size="11" font-weight="700" text-anchor="middle">Satellite Precipitation Fusion</text>
+      <text x="662" y="35" fill="#a855f7" font-size="9" text-anchor="middle">INSAT HEM / Hydro-Estimator</text>
+
+      <rect x="765" width="175" height="42" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+      <text x="852" y="20" fill="#e9d5ff" font-size="11" font-weight="700" text-anchor="middle">NWP Ensemble Fusion</text>
+      <text x="852" y="35" fill="#a855f7" font-size="9" text-anchor="middle">Multi-Model Spatial Interpolation</text>
+
+      <rect x="955" width="175" height="42" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+      <text x="1042" y="20" fill="#e9d5ff" font-size="11" font-weight="700" text-anchor="middle">Spatial-Temporal Alignment</text>
+      <text x="1042" y="35" fill="#a855f7" font-size="9" text-anchor="middle">Bilinear Grid Resampling</text>
+
+      <rect x="1145" width="175" height="42" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+      <text x="1232" y="20" fill="#e9d5ff" font-size="11" font-weight="700" text-anchor="middle">Model Disagreement Spread</text>
+      <text x="1232" y="35" fill="#a855f7" font-size="9" text-anchor="middle">Variance &amp; Outlier Filtering</text>
+
+      <rect x="1335" width="165" height="42" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+      <text x="1417" y="20" fill="#e9d5ff" font-size="11" font-weight="700" text-anchor="middle">Confidence Engine</text>
+      <text x="1417" y="35" fill="#a855f7" font-size="9" text-anchor="middle">Probabilistic Scoring (0-100%)</text>
+    </g>
+  </g>
+
+  <!-- Bifurcation arrows to Forecast & Hazards -->
+  <path d="M 500 435 L 500 458" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrowTeal)"/>
+  <path d="M 1100 435 L 1100 458" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ================= ZONE 4: FORECAST & NOWCAST (Teal Group) & HAZARD INTELLIGENCE (Red/Orange Group) ================= -->
+  <g transform="translate(40, 460)">
+    <!-- Left Half: Forecast / Nowcast -->
+    <rect width="745" height="120" rx="10" fill="#042f2e" stroke="#0d9488" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect width="745" height="24" rx="10" fill="#115e59"/>
+    <rect y="14" width="745" height="10" fill="#115e59"/>
+    <text x="20" y="17" fill="#ccfbf1" font-size="12" font-weight="800" letter-spacing="1">TIER 4A: FORECAST &amp; NOWCAST SYNTHESIS (0–48 HOURS)</text>
+
+    <g transform="translate(15, 34)">
+      <rect width="135" height="34" rx="5" fill="#134e4a" stroke="#2dd4bf" stroke-width="1"/>
+      <text x="67" y="18" fill="#f0fdfa" font-size="10" font-weight="700" text-anchor="middle">0–3h Nowcast</text>
+      <text x="67" y="29" fill="#5eead4" font-size="8" text-anchor="middle">Radar + Satellite Trend</text>
+
+      <rect x="145" width="140" height="34" rx="5" fill="#134e4a" stroke="#2dd4bf" stroke-width="1"/>
+      <text x="215" y="18" fill="#f0fdfa" font-size="10" font-weight="700" text-anchor="middle">3–24h Forecast</text>
+      <text x="215" y="29" fill="#5eead4" font-size="8" text-anchor="middle">Short-Range NWP Fusion</text>
+
+      <rect x="295" width="140" height="34" rx="5" fill="#134e4a" stroke="#2dd4bf" stroke-width="1"/>
+      <text x="365" y="18" fill="#f0fdfa" font-size="10" font-weight="700" text-anchor="middle">24–48h Extended</text>
+      <text x="365" y="29" fill="#5eead4" font-size="8" text-anchor="middle">Synoptic Multi-Model</text>
+
+      <rect x="445" width="140" height="34" rx="5" fill="#134e4a" stroke="#2dd4bf" stroke-width="1"/>
+      <text x="515" y="18" fill="#f0fdfa" font-size="10" font-weight="700" text-anchor="middle">Hourly Breakdown</text>
+      <text x="515" y="29" fill="#5eead4" font-size="8" text-anchor="middle">Temp / Rain / Wind Gusts</text>
+
+      <rect x="595" width="135" height="34" rx="5" fill="#134e4a" stroke="#f59e0b" stroke-width="1"/>
+      <text x="662" y="18" fill="#fef3c7" font-size="10" font-weight="700" text-anchor="middle">Forecast Bust Detector</text>
+      <text x="662" y="29" fill="#fde68a" font-size="8" text-anchor="middle">Real vs Predicted Divergence</text>
+
+      <!-- Sub-row params -->
+      <text x="10" y="58" fill="#99f6e4" font-size="10" font-weight="600">Synthesized Parameters:</text>
+      <text x="145" y="58" fill="#ccfbf1" font-size="10">Rainfall Probability &amp; Accumulation (mm) • 2m Temperature &amp; Heat Index</text>
+      <text x="145" y="74" fill="#ccfbf1" font-size="10">10m Wind Speed, Gusts &amp; Direction • Surface RH% • Barometric MSLP (hPa)</text>
+    </g>
+
+    <!-- Right Half: Hazard Intelligence -->
+    <g transform="translate(765, 0)">
+      <rect width="755" height="120" rx="10" fill="#450a0a" stroke="#dc2626" stroke-width="1.5" filter="url(#shadow)"/>
+      <rect width="755" height="24" rx="10" fill="#991b1b"/>
+      <rect y="14" width="755" height="10" fill="#991b1b"/>
+      <text x="20" y="17" fill="#fee2e2" font-size="12" font-weight="800" letter-spacing="1">TIER 4B: MULTI-HAZARD RISK ANALYSIS &amp; THRESHOLD DETECTOR</text>
+
+      <g transform="translate(15, 34)">
+        <rect width="115" height="34" rx="5" fill="#7f1d1d" stroke="#f87171" stroke-width="1"/>
+        <text x="57" y="18" fill="#fef2f2" font-size="10" font-weight="700" text-anchor="middle">Heavy Rainfall</text>
+        <text x="57" y="29" fill="#fca5a5" font-size="8" text-anchor="middle">>64.5mm / 24h Threshold</text>
+
+        <rect x="123" width="115" height="34" rx="5" fill="#7f1d1d" stroke="#f87171" stroke-width="1"/>
+        <text x="180" y="18" fill="#fef2f2" font-size="10" font-weight="700" text-anchor="middle">Thunderstorm / Gale</text>
+        <text x="180" y="29" fill="#fca5a5" font-size="8" text-anchor="middle">Lightning &amp; Gust >55kmh</text>
+
+        <rect x="246" width="115" height="34" rx="5" fill="#7f1d1d" stroke="#f87171" stroke-width="1"/>
+        <text x="303" y="18" fill="#fef2f2" font-size="10" font-weight="700" text-anchor="middle">Heatwave / Cold</text>
+        <text x="303" y="29" fill="#fca5a5" font-size="8" text-anchor="middle">IMD Departure Criteria</text>
+
+        <rect x="369" width="120" height="34" rx="5" fill="#7f1d1d" stroke="#f87171" stroke-width="1"/>
+        <text x="429" y="18" fill="#fef2f2" font-size="10" font-weight="700" text-anchor="middle">River Flood Risk</text>
+        <text x="429" y="29" fill="#fca5a5" font-size="8" text-anchor="middle">CWC Gauge Danger Level</text>
+
+        <rect x="497" width="115" height="34" rx="5" fill="#7f1d1d" stroke="#f87171" stroke-width="1"/>
+        <text x="554" y="18" fill="#fef2f2" font-size="10" font-weight="700" text-anchor="middle">Urban Waterlogging</text>
+        <text x="554" y="29" fill="#fca5a5" font-size="8" text-anchor="middle">Drainage &amp; Flash Flooding</text>
+
+        <rect x="620" width="115" height="34" rx="5" fill="#7f1d1d" stroke="#f87171" stroke-width="1"/>
+        <text x="677" y="18" fill="#fef2f2" font-size="10" font-weight="700" text-anchor="middle">Cyclone Track Risk</text>
+        <text x="677" y="29" fill="#fca5a5" font-size="8" text-anchor="middle">Storm Surge &amp; Landfall</text>
+
+        <text x="10" y="60" fill="#fca5a5" font-size="10" font-weight="700">Crucial Rule Check:</text>
+        <text x="125" y="60" fill="#fee2e2" font-size="10">Heavy Rainfall Risk ≠ Flood Risk (Drainage basin, slope, saturation &amp; river telemetry required)</text>
+        <text x="10" y="75" fill="#cbd5e1" font-size="10">Alert Severity Mapping: <tspan fill="#10b981">GREEN (Normal)</tspan> • <tspan fill="#facc15">YELLOW (Watch)</tspan> • <tspan fill="#f97316">ORANGE (Alert)</tspan> • <tspan fill="#ef4444">RED (Take Action)</tspan></text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Convergence to Canonical Snapshot -->
+  <path d="M 412 580 L 412 600 L 780 600 L 780 618" stroke="#10b981" stroke-width="2"/>
+  <path d="M 1142 580 L 1142 600 L 820 600 L 820 618" stroke="#ef4444" stroke-width="2"/>
+  <line x1="800" y1="600" x2="800" y2="618" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowCyan)"/>
+
+  <!-- ================= ZONE 5: CANONICAL WEATHER SNAPSHOT (Core Domain Contract) ================= -->
+  <g transform="translate(40, 620)">
+    <rect width="1520" height="95" rx="10" fill="#0f172a" stroke="#0ea5e9" stroke-width="2" filter="url(#shadow)"/>
+    <rect width="1520" height="26" rx="10" fill="#0369a1"/>
+    <rect y="16" width="1520" height="10" fill="#0369a1"/>
+    <text x="20" y="19" fill="#ffffff" font-size="13" font-weight="900" letter-spacing="1">TIER 5: CANONICAL WEATHER SNAPSHOT (SINGLE SOURCE OF TRUTH CONTRACT)</text>
+    <text x="750" y="19" fill="#7dd3fc" font-size="11" font-weight="600">Deterministic Model: 1 Location + 1 Valid Timestamp = Identical Data Across All UI &amp; Services</text>
+
+    <g transform="translate(15, 34)">
+      <!-- Payload Elements -->
+      <rect width="180" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+      <text x="12" y="18" fill="#38bdf8" font-size="10" font-weight="700">Geographic Entity</text>
+      <text x="12" y="32" fill="#cbd5e1" font-size="9">Lat/Lon • CanonicalLoc ID</text>
+      <text x="12" y="44" fill="#94a3b8" font-size="8">District / Block / Village / Terrain</text>
+
+      <rect x="190" width="180" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+      <text x="202" y="18" fill="#38bdf8" font-size="10" font-weight="700">Observation State</text>
+      <text x="202" y="32" fill="#cbd5e1" font-size="9">Temp • RH • Wind • MSLP</text>
+      <text x="202" y="44" fill="#94a3b8" font-size="8">Rain Rate • UV • Visibility</text>
+
+      <rect x="380" width="195" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+      <text x="392" y="18" fill="#38bdf8" font-size="10" font-weight="700">Temporal Forecasts</text>
+      <text x="392" y="32" fill="#cbd5e1" font-size="9">1h, 3h, 6h, 12h, 24h, 48h</text>
+      <text x="392" y="44" fill="#94a3b8" font-size="8">Hourly Time-Series Array</text>
+
+      <rect x="585" width="180" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+      <text x="597" y="18" fill="#38bdf8" font-size="10" font-weight="700">Radar &amp; Satellite State</text>
+      <text x="597" y="32" fill="#cbd5e1" font-size="9">Nearest DWR Reflectivity (dBZ)</text>
+      <text x="597" y="44" fill="#94a3b8" font-size="8">Cloud Motion &amp; Rain Cell Vector</text>
+
+      <rect x="775" width="185" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+      <text x="787" y="18" fill="#38bdf8" font-size="10" font-weight="700">Hydrology &amp; Hazard State</text>
+      <text x="787" y="32" fill="#cbd5e1" font-size="9">River Danger Status • Inundation</text>
+      <text x="787" y="44" fill="#94a3b8" font-size="8">Cyclone Threat • Active Alerts</text>
+
+      <rect x="970" width="175" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+      <text x="982" y="18" fill="#38bdf8" font-size="10" font-weight="700">Confidence &amp; Uncertainty</text>
+      <text x="982" y="32" fill="#cbd5e1" font-size="9">Confidence Score (0–100%)</text>
+      <text x="982" y="44" fill="#94a3b8" font-size="8">Model Disagreement Spread</text>
+
+      <rect x="1155" width="175" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+      <text x="1167" y="18" fill="#38bdf8" font-size="10" font-weight="700">Agromet Evaluation</text>
+      <text x="1167" y="32" fill="#cbd5e1" font-size="9">Crop Suitability Index</text>
+      <text x="1167" y="44" fill="#94a3b8" font-size="8">Safe Spray Windows • Irrigation</text>
+
+      <rect x="1340" width="165" height="50" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1"/>
+      <text x="1352" y="18" fill="#34d399" font-size="10" font-weight="700">Provenance &amp; Freshness</text>
+      <text x="1352" y="32" fill="#cbd5e1" font-size="9">LIVE / RECENT / CACHED</text>
+      <text x="1352" y="44" fill="#94a3b8" font-size="8">Source Attribution Trace</text>
+    </g>
+  </g>
+
+  <!-- Arrow down to AI Layer -->
+  <line x1="800" y1="715" x2="800" y2="738" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrowViolet)"/>
+
+  <!-- ================= ZONE 6: AI INTELLIGENCE & EXPLANATION LAYER (Violet Group) ================= -->
+  <g transform="translate(40, 740)">
+    <rect width="1520" height="85" rx="10" fill="#2e1065" stroke="#7c3aed" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect width="1520" height="24" rx="10" fill="#6d28d9"/>
+    <rect y="14" width="1520" height="10" fill="#6d28d9"/>
+    <text x="20" y="17" fill="#ede9fe" font-size="12" font-weight="800" letter-spacing="1">TIER 6: AI INTELLIGENCE, EXPLANATION &amp; CONVERSATIONAL ADVISORY (GEMINI / KRISHI)</text>
+    <text x="920" y="17" fill="#c4b5fd" font-size="11" font-weight="600">CRITICAL: Gemini is the Explanation Layer — NOT the Meteorological Source (Zero Hallucination)</text>
+
+    <g transform="translate(15, 34)">
+      <rect width="200" height="42" rx="6" fill="#4c1d95" stroke="#a78bfa" stroke-width="1"/>
+      <text x="100" y="20" fill="#ede9fe" font-size="11" font-weight="700" text-anchor="middle">Gemini Pro / Flash Model</text>
+      <text x="100" y="35" fill="#c4b5fd" font-size="9" text-anchor="middle">Grounded on Canonical Snapshot</text>
+
+      <rect x="215" width="200" height="42" rx="6" fill="#4c1d95" stroke="#a78bfa" stroke-width="1"/>
+      <text x="315" y="20" fill="#ede9fe" font-size="11" font-weight="700" text-anchor="middle">Natural Language NLU</text>
+      <text x="315" y="35" fill="#c4b5fd" font-size="9" text-anchor="middle">Intent &amp; Entity Slot Filling</text>
+
+      <rect x="430" width="200" height="42" rx="6" fill="#4c1d95" stroke="#a78bfa" stroke-width="1"/>
+      <text x="530" y="20" fill="#ede9fe" font-size="11" font-weight="700" text-anchor="middle">Meteorological Explainer</text>
+      <text x="530" y="35" fill="#c4b5fd" font-size="9" text-anchor="middle">Translates Complex Data to Plain Text</text>
+
+      <rect x="645" width="210" height="42" rx="6" fill="#4c1d95" stroke="#a78bfa" stroke-width="1"/>
+      <text x="750" y="20" fill="#ede9fe" font-size="11" font-weight="700" text-anchor="middle">KrishiGPT Agromet Engine</text>
+      <text x="750" y="35" fill="#c4b5fd" font-size="9" text-anchor="middle">Crop Advisory, Spraying &amp; Soil Ops</text>
+
+      <rect x="870" width="205" height="42" rx="6" fill="#4c1d95" stroke="#a78bfa" stroke-width="1"/>
+      <text x="972" y="20" fill="#ede9fe" font-size="11" font-weight="700" text-anchor="middle">Multilingual Engine</text>
+      <text x="972" y="35" fill="#c4b5fd" font-size="9" text-anchor="middle">10 Indian Languages Translation</text>
+
+      <rect x="1090" width="205" height="42" rx="6" fill="#4c1d95" stroke="#a78bfa" stroke-width="1"/>
+      <text x="1192" y="20" fill="#ede9fe" font-size="11" font-weight="700" text-anchor="middle">Voice AI Pipeline</text>
+      <text x="1192" y="35" fill="#c4b5fd" font-size="9" text-anchor="middle">Realtime STT → NLU → TTS Audio</text>
+
+      <rect x="1310" width="190" height="42" rx="6" fill="#4c1d95" stroke="#10b981" stroke-width="1"/>
+      <text x="1405" y="20" fill="#34d399" font-size="11" font-weight="700" text-anchor="middle">Action Recommendation</text>
+      <text x="1405" y="35" fill="#c4b5fd" font-size="9" text-anchor="middle">Safety Protocol Action Cards</text>
+    </g>
+  </g>
+
+  <!-- Arrow down to Applications -->
+  <line x1="800" y1="825" x2="800" y2="848" stroke="#10b981" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ================= ZONE 7: APPLICATIONS & DELIVERY (Green Group) ================= -->
+  <g transform="translate(40, 850)">
+    <rect width="1520" height="85" rx="10" fill="#052e16" stroke="#16a34a" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect width="1520" height="24" rx="10" fill="#15803d"/>
+    <rect y="14" width="1520" height="10" fill="#15803d"/>
+    <text x="20" y="17" fill="#dcfce7" font-size="12" font-weight="800" letter-spacing="1">TIER 7: APPLICATION MODULES &amp; CITIZEN/ENTERPRISE DELIVERY CHANNELS</text>
+
+    <g transform="translate(15, 34)">
+      <rect width="115" height="42" rx="6" fill="#14532d" stroke="#4ade80" stroke-width="1"/>
+      <text x="57" y="19" fill="#f0fdf4" font-size="10" font-weight="700" text-anchor="middle">Weather Home</text>
+      <text x="57" y="33" fill="#86efac" font-size="8" text-anchor="middle">Current &amp; Hourly Cards</text>
+
+      <rect x="123" width="115" height="42" rx="6" fill="#14532d" stroke="#4ade80" stroke-width="1"/>
+      <text x="180" y="19" fill="#f0fdf4" font-size="10" font-weight="700" text-anchor="middle">Weather Chat</text>
+      <text x="180" y="33" fill="#86efac" font-size="8" text-anchor="middle">Conversational Q&amp;A</text>
+
+      <rect x="246" width="115" height="42" rx="6" fill="#14532d" stroke="#4ade80" stroke-width="1"/>
+      <text x="303" y="19" fill="#f0fdf4" font-size="10" font-weight="700" text-anchor="middle">Voice Assistant</text>
+      <text x="303" y="33" fill="#86efac" font-size="8" text-anchor="middle">Multilingual Audio Bot</text>
+
+      <rect x="369" width="125" height="42" rx="6" fill="#14532d" stroke="#4ade80" stroke-width="1"/>
+      <text x="431" y="19" fill="#f0fdf4" font-size="10" font-weight="700" text-anchor="middle">Radar GIS Map</text>
+      <text x="431" y="33" fill="#86efac" font-size="8" text-anchor="middle">Interactive DWR Rays</text>
+
+      <rect x="502" width="125" height="42" rx="6" fill="#14532d" stroke="#4ade80" stroke-width="1"/>
+      <text x="564" y="19" fill="#f0fdf4" font-size="10" font-weight="700" text-anchor="middle">Forecast View</text>
+      <text x="564" y="33" fill="#86efac" font-size="8" text-anchor="middle">48h &amp; 7-Day Ensemble</text>
+
+      <rect x="635" width="130" height="42" rx="6" fill="#14532d" stroke="#4ade80" stroke-width="1"/>
+      <text x="700" y="19" fill="#f0fdf4" font-size="10" font-weight="700" text-anchor="middle">Smart Early Alerts</text>
+      <text x="700" y="33" fill="#86efac" font-size="8" text-anchor="middle">Push / Webhook / SMS</text>
+
+      <rect x="773" width="135" height="42" rx="6" fill="#14532d" stroke="#4ade80" stroke-width="1"/>
+      <text x="840" y="19" fill="#f0fdf4" font-size="10" font-weight="700" text-anchor="middle">Krishi Agromet</text>
+      <text x="840" y="33" fill="#86efac" font-size="8" text-anchor="middle">Farmer Crop Calendar</text>
+
+      <rect x="916" width="135" height="42" rx="6" fill="#14532d" stroke="#4ade80" stroke-width="1"/>
+      <text x="983" y="19" fill="#f0fdf4" font-size="10" font-weight="700" text-anchor="middle">Flood &amp; Disaster</text>
+      <text x="983" y="33" fill="#86efac" font-size="8" text-anchor="middle">River Basin Monitor</text>
+
+      <rect x="1059" width="135" height="42" rx="6" fill="#14532d" stroke="#4ade80" stroke-width="1"/>
+      <text x="1126" y="19" fill="#f0fdf4" font-size="10" font-weight="700" text-anchor="middle">Smart City Portal</text>
+      <text x="1126" y="33" fill="#86efac" font-size="8" text-anchor="middle">Urban Waterlogging Map</text>
+
+      <rect x="1202" width="135" height="42" rx="6" fill="#14532d" stroke="#4ade80" stroke-width="1"/>
+      <text x="1269" y="19" fill="#f0fdf4" font-size="10" font-weight="700" text-anchor="middle">Route Intelligence</text>
+      <text x="1269" y="33" fill="#86efac" font-size="8" text-anchor="middle">Aviation &amp; Logistics Path</text>
+
+      <rect x="1345" width="150" height="42" rx="6" fill="#14532d" stroke="#4ade80" stroke-width="1"/>
+      <text x="1420" y="19" fill="#f0fdf4" font-size="10" font-weight="700" text-anchor="middle">Offline Rural Mode</text>
+      <text x="1420" y="33" fill="#86efac" font-size="8" text-anchor="middle">Room DB Local Cache</text>
+    </g>
+  </g>
+
+  <!-- ================= ZONE 8: END USERS (Bottom Tier) ================= -->
+  <g transform="translate(40, 945)">
+    <rect width="1520" height="75" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="25" y="25" fill="#cbd5e1" font-size="11" font-weight="700" letter-spacing="1">TARGET STAKEHOLDERS &amp; RECIPIENTS:</text>
+
+    <g transform="translate(25, 34)">
+      <rect width="220" height="32" rx="4" fill="#0f172a" stroke="#334155"/>
+      <text x="110" y="20" fill="#e2e8f0" font-size="11" font-weight="600" text-anchor="middle">👨‍🌾 Farmers &amp; Agromet Panchayats</text>
+
+      <rect x="235" width="230" height="32" rx="4" fill="#0f172a" stroke="#334155"/>
+      <text x="350" y="20" fill="#e2e8f0" font-size="11" font-weight="600" text-anchor="middle">🚨 Disaster Management (NDRF/SDMA)</text>
+
+      <rect x="480" width="220" height="32" rx="4" fill="#0f172a" stroke="#334155"/>
+      <text x="590" y="20" fill="#e2e8f0" font-size="11" font-weight="600" text-anchor="middle">🏙️ Municipal Smart City Authorities</text>
+
+      <rect x="715" width="220" height="32" rx="4" fill="#0f172a" stroke="#334155"/>
+      <text x="825" y="20" fill="#e2e8f0" font-size="11" font-weight="600" text-anchor="middle">✈️ Aviation &amp; Coastal Marine Units</text>
+
+      <rect x="950" width="220" height="32" rx="4" fill="#0f172a" stroke="#334155"/>
+      <text x="1060" y="20" fill="#e2e8f0" font-size="11" font-weight="600" text-anchor="middle">🏡 Vulnerable Local Communities</text>
+
+      <rect x="1185" width="310" height="32" rx="4" fill="#0f172a" stroke="#334155"/>
+      <text x="1340" y="20" fill="#e2e8f0" font-size="11" font-weight="600" text-anchor="middle">📱 General Citizens (Android App &amp; Voice)</text>
+    </g>
+  </g>
+
+  <!-- ================= FOOTER ================= -->
+  <g transform="translate(40, 1035)">
+    <line x1="0" y1="0" x2="1520" y2="0" stroke="#334155" stroke-width="1"/>
+    <text x="0" y="25" fill="#38bdf8" font-size="12" font-weight="800">WeatherGPT | SIH 2026 | PS-68 | Ministry of Earth Sciences</text>
+    <text x="760" y="25" fill="#facc15" font-size="12" font-weight="700" text-anchor="middle">Data → Intelligence → Forecast → Risk → Action</text>
+    <text x="1520" y="25" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">Production Implementation • Zero-Hallucination Architecture</text>
+  </g>
+</svg>

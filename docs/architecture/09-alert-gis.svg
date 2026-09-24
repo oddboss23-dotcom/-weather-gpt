@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1050" width="100%" height="100%" style="background:#0b0f19; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <marker id="arrowA9" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrowG9" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#06b6d4"/>
+    </marker>
+    <filter id="shadow9" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1050" fill="url(#bgGrad9)"/>
+
+  <!-- Top Banner -->
+  <rect x="40" y="30" width="1520" height="80" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow9)"/>
+  <text x="70" y="66" fill="#f8fafc" font-size="22" font-weight="800">DIAGRAM 9: EARLY ALERT ENGINE &amp; GIS SPATIAL VISUALIZATION ARCHITECTURE</text>
+  <text x="70" y="90" fill="#94a3b8" font-size="13">Mission-Critical Warning Pipeline: Deduplicated Multi-Hazard Alerting + Multilayer Radar/Satellite Vector GIS Stack</text>
+  <rect x="1270" y="48" width="260" height="42" rx="6" fill="#0f172a" stroke="#ef4444" stroke-width="1.2"/>
+  <text x="1400" y="74" fill="#f87171" font-size="12" font-weight="700" text-anchor="middle">SPATIO-TEMPORAL COUPLING</text>
+
+  <!-- ================= TWO MAJOR HALVES ================= -->
+
+  <!-- LEFT HALF: ALERT ENGINE & DISPATCH (Red/Orange Group) -->
+  <g transform="translate(40, 130)">
+    <rect width="745" height="840" rx="12" fill="#18181b" stroke="#ef4444" stroke-width="2" filter="url(#shadow9)"/>
+    <rect width="745" height="40" rx="12" fill="#991b1b"/>
+    <rect y="24" width="745" height="16" fill="#991b1b"/>
+    <text x="20" y="27" fill="#fee2e2" font-size="14" font-weight="900" letter-spacing="0.5">PART 1: ENTERPRISE ALERT PROCESSING &amp; DISPATCH</text>
+    <rect x="620" y="8" width="110" height="24" rx="4" fill="#b91c1c"/>
+    <text x="675" y="24" fill="#fee2e2" font-size="10" font-weight="800" text-anchor="middle">CAP-COMPLIANT</text>
+
+    <g transform="translate(20, 54)">
+      <!-- Section 1: Inputs -->
+      <rect width="705" height="185" rx="8" fill="#27272a" stroke="#ef4444" stroke-width="1"/>
+      <text x="15" y="22" fill="#fca5a5" font-size="12" font-weight="800">1. MULTI-HAZARD SENSOR &amp; BULLETIN INPUTS</text>
+
+      <g transform="translate(15, 34)">
+        <rect width="330" height="32" rx="4" fill="#3f3f46"/>
+        <text x="10" y="20" fill="#fef2f2" font-size="10" font-weight="700">Official IMD Warnings:</text>
+        <text x="165" y="20" fill="#cbd5e1" font-size="10">District CAP Bulletins</text>
+
+        <rect x="345" width="330" height="32" rx="4" fill="#3f3f46"/>
+        <text x="355" y="20" fill="#fef2f2" font-size="10" font-weight="700">Doppler Radar Echoes:</text>
+        <text x="500" y="20" fill="#cbd5e1" font-size="10">&gt;40 dBZ Convective Cells</text>
+
+        <rect y="38" width="330" height="32" rx="4" fill="#3f3f46"/>
+        <text x="10" y="58" fill="#fef2f2" font-size="10" font-weight="700">AWS Observed Rainfall:</text>
+        <text x="165" y="58" fill="#cbd5e1" font-size="10">&gt;64.5mm Heavy Rain Mark</text>
+
+        <rect x="345" y="38" width="330" height="32" rx="4" fill="#3f3f46"/>
+        <text x="355" y="58" fill="#fef2f2" font-size="10" font-weight="700">CWC Hydrology Gauges:</text>
+        <text x="505" y="58" fill="#cbd5e1" font-size="10">River Water Level vs Danger</text>
+
+        <rect y="76" width="330" height="32" rx="4" fill="#3f3f46"/>
+        <text x="10" y="96" fill="#fef2f2" font-size="10" font-weight="700">Flood Risk Engine Score:</text>
+        <text x="165" y="96" fill="#cbd5e1" font-size="10">Inundation &amp; Runoff Level</text>
+
+        <rect x="345" y="76" width="330" height="32" rx="4" fill="#3f3f46"/>
+        <text x="355" y="96" fill="#fef2f2" font-size="10" font-weight="700">Tropical Cyclone Track:</text>
+        <text x="500" y="96" fill="#cbd5e1" font-size="10">Eye Landfall Distance &amp; Wind</text>
+
+        <rect y="114" width="675" height="28" rx="4" fill="#52525b"/>
+        <text x="10" y="132" fill="#fef08a" font-size="9.5" font-weight="700">NWP High-Wind / Squall Forecast: 10m Gusts &gt; 55 km/h over 3h horizon</text>
+      </g>
+
+      <line x1="352" y1="187" x2="352" y2="210" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowA9)"/>
+
+      <!-- Section 2: Processing & Deduplication -->
+      <g transform="translate(0, 212)">
+        <rect width="705" height="275" rx="8" fill="#27272a" stroke="#f97316" stroke-width="1.5"/>
+        <text x="15" y="24" fill="#fdba74" font-size="12" font-weight="800">2. PROCESSING, SEVERITY MAPPING &amp; DEDUPLICATION</text>
+
+        <g transform="translate(15, 36)">
+          <!-- Sub-box A -->
+          <rect width="675" height="52" rx="5" fill="#3f3f46"/>
+          <text x="12" y="18" fill="#fed7aa" font-size="11" font-weight="700">Geographic Spatial Intersect (Point-in-Polygon)</text>
+          <text x="12" y="34" fill="#e2e8f0" font-size="10">Maps user's Village / Block Lat/Lon against active flood basin &amp; warning polygon</text>
+          <text x="12" y="46" fill="#a1a1aa" font-size="9">Ensures zero false alerts for non-threatened adjacent districts</text>
+
+          <!-- Sub-box B -->
+          <rect y="58" width="675" height="52" rx="5" fill="#3f3f46"/>
+          <text x="12" y="76" fill="#fed7aa" font-size="11" font-weight="700">Severity Level Gating (Green • Yellow • Orange • Red)</text>
+          <text x="12" y="92" fill="#e2e8f0" font-size="10">Normal (Green) → Watch (Yellow) → Alert (Orange) → Take Action (Red)</text>
+          <text x="12" y="104" fill="#a1a1aa" font-size="9">Red triggered if: River &gt; Danger OR Rain &gt; 115mm OR Cyclone Wind &gt; 90km/h</text>
+
+          <!-- Sub-box C -->
+          <rect y="116" width="675" height="52" rx="5" fill="#3f3f46"/>
+          <text x="12" y="134" fill="#fed7aa" font-size="11" font-weight="700">Smart Deduplication &amp; Rate-Limiting (AlertPriorityManager.kt)</text>
+          <text x="12" y="150" fill="#e2e8f0" font-size="10">Suppresses identical notifications within 60-minute window</text>
+          <text x="12" y="162" fill="#a1a1aa" font-size="9">Prevents alert fatigue while preserving emergency awareness</text>
+
+          <!-- Sub-box D -->
+          <rect y="174" width="675" height="54" rx="5" fill="#7c2d12" stroke="#f97316"/>
+          <text x="12" y="192" fill="#ffffff" font-size="11" font-weight="800">Priority Escalation &amp; Life-Safety Override</text>
+          <text x="12" y="208" fill="#ffedd5" font-size="10">If river crosses Danger Mark or Flash Flood onset &lt; 30 mins:</text>
+          <text x="12" y="222" fill="#fed7aa" font-size="9.5" font-weight="700">Instantly overrides mute, bypasses TTL, and elevates to Emergency Category</text>
+        </g>
+      </g>
+
+      <line x1="352" y1="490" x2="352" y2="512" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowA9)"/>
+
+      <!-- Section 3: Dispatch -->
+      <g transform="translate(0, 515)">
+        <rect width="705" height="245" rx="8" fill="#450a0a" stroke="#ef4444" stroke-width="2"/>
+        <text x="15" y="24" fill="#ffffff" font-size="13" font-weight="900">3. MULTI-CHANNEL RAPID DISPATCH</text>
+
+        <g transform="translate(15, 38)">
+          <rect width="675" height="42" rx="6" fill="#7f1d1d" stroke="#f87171"/>
+          <text x="12" y="18" fill="#ffffff" font-size="11" font-weight="700">📱 Android In-App High-Priority Banner &amp; Haptic Buzzer</text>
+          <text x="12" y="32" fill="#fee2e2" font-size="9.5">AlertsScreen.kt banner with color-coded pulsing border and actionable evacuation card</text>
+
+          <rect y="48" width="675" height="42" rx="6" fill="#7f1d1d" stroke="#f87171"/>
+          <text x="12" y="66" fill="#ffffff" font-size="11" font-weight="700">🔊 Automated Multilingual Speech Warning (TTS Audio)</text>
+          <text x="12" y="80" fill="#fee2e2" font-size="9.5">Speaks clear safety advice in user's selected regional Indian language</text>
+
+          <rect y="96" width="675" height="42" rx="6" fill="#7f1d1d" stroke="#f87171"/>
+          <text x="12" y="114" fill="#ffffff" font-size="11" font-weight="700">🌐 n8n Disaster Webhook Pipeline (N8nAlertService.kt)</text>
+          <text x="12" y="128" fill="#fee2e2" font-size="9.5">Transmits JSON payload to emergency webhooks for external SMS / Siren gateways</text>
+
+          <rect y="144" width="675" height="48" rx="6" fill="#14532d" stroke="#4ade80"/>
+          <text x="12" y="162" fill="#86efac" font-size="11" font-weight="800">💾 Room Database Local Event Log (Audit Trail)</text>
+          <text x="12" y="178" fill="#f0fdf4" font-size="9.5">Persists alert timestamp and severity for post-event disaster review</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- RIGHT HALF: GIS SPATIAL MAP ENGINE (Cyan/Teal Group) -->
+  <g transform="translate(815, 130)">
+    <rect width="745" height="840" rx="12" fill="#082f49" stroke="#06b6d4" stroke-width="2" filter="url(#shadow9)"/>
+    <rect width="745" height="40" rx="12" fill="#0e7490"/>
+    <rect y="24" width="745" height="16" fill="#0e7490"/>
+    <text x="20" y="27" fill="#cffafe" font-size="14" font-weight="900" letter-spacing="0.5">PART 2: MULTILAYER VECTOR GIS MAP ARCHITECTURE</text>
+    <rect x="610" y="8" width="120" height="24" rx="4" fill="#0891b2"/>
+    <text x="670" y="24" fill="#e0f2fe" font-size="10" font-weight="800" text-anchor="middle">JETPACK CANVAS</text>
+
+    <g transform="translate(20, 54)">
+      <!-- Map Core Container -->
+      <rect width="705" height="75" rx="8" fill="#0c4a6e" stroke="#06b6d4" stroke-width="1"/>
+      <text x="15" y="22" fill="#a5f3fc" font-size="12" font-weight="800">GIS MAP ENGINE (RadarMapScreen.kt &amp; RadarForecastScreen.kt)</text>
+      <text x="15" y="42" fill="#e0f2fe" font-size="10.5">Hardware-Accelerated Android Canvas with 60 FPS Smooth Pan &amp; Zoom</text>
+      <text x="15" y="58" fill="#7dd3fc" font-size="9.5">Coordinate System: WGS84 Geographic Lat/Lon → Screen Pixel Mercator Projection</text>
+
+      <!-- 7-Layer GIS Stack Diagram -->
+      <g transform="translate(0, 90)">
+        <text x="5" y="16" fill="#67e8f9" font-size="12" font-weight="800">COMPOSITE GIS LAYER STACK (BOTTOM TO TOP):</text>
+
+        <!-- Layer 1 -->
+        <g transform="translate(0, 26)">
+          <rect width="705" height="52" rx="6" fill="#042f2e" stroke="#14b8a6" stroke-width="1.2"/>
+          <text x="15" y="20" fill="#2dd4bf" font-size="11" font-weight="800">LAYER 1: Base Vector Map &amp; Administrative Boundaries</text>
+          <text x="15" y="36" fill="#e2e8f0" font-size="10">• State, District and Block boundary polygons (GeoJSON vector data)</text>
+          <text x="15" y="48" fill="#99f6e4" font-size="8.5">Indian subcontinental coastlines, national highway corridors and district centroids</text>
+        </g>
+
+        <!-- Layer 2 -->
+        <g transform="translate(0, 84)">
+          <rect width="705" height="60" rx="6" fill="#3f0f0f" stroke="#ef4444" stroke-width="1.5"/>
+          <text x="15" y="20" fill="#fca5a5" font-size="11" font-weight="800">LAYER 2: Doppler Weather Radar Reflectivity Overlay (dBZ Color Heatmap)</text>
+          <text x="15" y="36" fill="#fee2e2" font-size="10">• Continuous radial ray rendering: 0 dBZ (Light blue) to 65+ dBZ (Deep magenta)</text>
+          <text x="15" y="48" fill="#fee2e2" font-size="9.5">• Storm cell centroid vectors &amp; projected 30-min downwind trajectory cone</text>
+          <text x="15" y="57" fill="#fca5a5" font-size="8.5">Code Ref: <tspan fill="#ffffff">GisRadarPointsEntity.kt &amp; RadarForecastScreen.kt</tspan></text>
+        </g>
+
+        <!-- Layer 3 -->
+        <g transform="translate(0, 150)">
+          <rect width="705" height="52" rx="6" fill="#082f49" stroke="#0ea5e9" stroke-width="1.2"/>
+          <text x="15" y="20" fill="#7dd3fc" font-size="11" font-weight="800">LAYER 3: INSAT-3D Satellite Cloud Moisture &amp; Infrared Topo</text>
+          <text x="15" y="36" fill="#e0f2fe" font-size="10">• Thermal IR Brightness Temperature (&lt; -40°C convective towers)</text>
+          <text x="15" y="48" fill="#bae6fd" font-size="8.5">Bridges gaps in deep rural or offshore regions beyond radar horizon</text>
+        </g>
+
+        <!-- Layer 4 -->
+        <g transform="translate(0, 208)">
+          <rect width="705" height="52" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.2"/>
+          <text x="15" y="20" fill="#a5b4fc" font-size="11" font-weight="800">LAYER 4: Surface Meteorological AWS / ARG Station Pins</text>
+          <text x="15" y="36" fill="#e0e7ff" font-size="10">• Interactive clickable pins: Displays Temperature, RH%, Pressure and 24h Rain</text>
+          <text x="15" y="48" fill="#c7d2fe" font-size="8.5">Real-time ground truth calibration points across all Indian states</text>
+        </g>
+
+        <!-- Layer 5 -->
+        <g transform="translate(0, 266)">
+          <rect width="705" height="52" rx="6" fill="#431407" stroke="#f97316" stroke-width="1.2"/>
+          <text x="15" y="20" fill="#fdba74" font-size="11" font-weight="800">LAYER 5: CWC Hydrology River Gauges &amp; Danger Waterlines</text>
+          <text x="15" y="36" fill="#ffedd5" font-size="10">• River course polylines + telemetry gauge pins colored by flood status</text>
+          <text x="15" y="48" fill="#fed7aa" font-size="8.5">Pin shows: Current Water Level (m) vs Official Danger Level vs Trend</text>
+        </g>
+
+        <!-- Layer 6 -->
+        <g transform="translate(0, 324)">
+          <rect width="705" height="56" rx="6" fill="#450a0a" stroke="#dc2626" stroke-width="1.2"/>
+          <text x="15" y="20" fill="#fca5a5" font-size="11" font-weight="800">LAYER 6: Dynamic Hazard Isohyet Polygons &amp; Cyclone Wind Ring</text>
+          <text x="15" y="36" fill="#fee2e2" font-size="10">• 24h Rainfall accumulation contours (e.g. &gt;115mm Very Heavy zone)</text>
+          <text x="15" y="48" fill="#fee2e2" font-size="9.5">• Radius of Maximum Wind (RMW) circle &amp; storm surge coastal risk buffer</text>
+        </g>
+
+        <!-- Layer 7 -->
+        <g transform="translate(0, 386)">
+          <rect width="705" height="56" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+          <text x="15" y="20" fill="#fde68a" font-size="11" font-weight="800">LAYER 7: Forecast Bust Risk &amp; Uncertainty Visualization Overlay</text>
+          <text x="15" y="36" fill="#fef3c7" font-size="10">• Stippled hatch pattern indicating regions where NWP models diverge &gt; 30%</text>
+          <text x="15" y="48" fill="#fde68a" font-size="9.5">• Visually alerts disaster managers to exercise caution in low-confidence zones</text>
+        </g>
+      </g>
+
+      <!-- Bottom Interactive Capabilities Box -->
+      <g transform="translate(0, 545)">
+        <rect width="705" height="150" rx="8" fill="#034561" stroke="#38bdf8" stroke-width="2"/>
+        <text x="15" y="24" fill="#ffffff" font-size="13" font-weight="900">GIS INTERACTIVE FEATURES (PRODUCTION IMPLEMENTATION)</text>
+        <text x="15" y="46" fill="#e0f2fe" font-size="11">✓ Time-Lapse Playback: 3-hour historical radar loop + 1-hour nowcast forward</text>
+        <text x="15" y="64" fill="#e0f2fe" font-size="11">✓ Layer Toggles: Farmers can toggle soil moisture, while NDRF toggles flood basins</text>
+        <text x="15" y="82" fill="#e0f2fe" font-size="11">✓ Offline Vector Map: Bundled Indian administrative geometries stored locally</text>
+        <text x="15" y="104" fill="#facc15" font-size="10" font-weight="700">Code Ref: RadarMapScreen.kt &amp; GisRadarRepository.kt</text>
+        <text x="15" y="126" fill="#bae6fd" font-size="9.5">Provides instant situational awareness during cyclonic storms and heavy monsoons</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= FOOTER ================= -->
+  <g transform="translate(40, 995)">
+    <line x1="0" y1="0" x2="1520" y2="0" stroke="#334155" stroke-width="1"/>
+    <text x="0" y="25" fill="#38bdf8" font-size="12" font-weight="800">WeatherGPT | SIH 2026 | PS-68 | Ministry of Earth Sciences</text>
+    <text x="760" y="25" fill="#facc15" font-size="12" font-weight="700" text-anchor="middle">Data → Intelligence → Forecast → Risk → Action</text>
+    <text x="1520" y="25" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">Production Implementation • Zero-Hallucination Architecture</text>
+  </g>
+</svg>

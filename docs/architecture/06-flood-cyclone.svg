@@ -1,0 +1,240 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1050" width="100%" height="100%" style="background:#0b0f19; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="50%" stop-color="#1c1917"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <marker id="arrowR6" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrowO6" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#f97316"/>
+    </marker>
+    <marker id="arrowG6" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#22c55e"/>
+    </marker>
+    <filter id="shadow6" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1050" fill="url(#bgGrad6)"/>
+
+  <!-- Top Banner -->
+  <rect x="40" y="30" width="1520" height="80" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow6)"/>
+  <text x="70" y="66" fill="#f8fafc" font-size="22" font-weight="800">DIAGRAM 6: FLOOD &amp; CYCLONE EARLY WARNING MULTI-HAZARD ARCHITECTURE</text>
+  <text x="70" y="90" fill="#94a3b8" font-size="13">Dual Specialized Risk Engines: Hydrological River Basin / Inundation Modeling + Cyclone Track &amp; Wind Threat Evaluation</text>
+  <rect x="1270" y="48" width="260" height="42" rx="6" fill="#0f172a" stroke="#ef4444" stroke-width="1.2"/>
+  <text x="1400" y="74" fill="#f87171" font-size="12" font-weight="700" text-anchor="middle">LIFE-SAFETY PRIORITY</text>
+
+  <!-- ================= CRITICAL PRINCIPLE BANNER ================= -->
+  <rect x="40" y="125" width="1520" height="45" rx="8" fill="#450a0a" stroke="#ef4444" stroke-width="1.5"/>
+  <circle cx="65" cy="147" r="10" fill="#ef4444"/>
+  <text x="65" y="152" fill="#ffffff" font-size="13" font-weight="900" text-anchor="middle">!</text>
+  <text x="90" y="152" fill="#fee2e2" font-size="13" font-weight="800">CRITICAL METEOROLOGICAL PRINCIPLE:</text>
+  <text x="400" y="152" fill="#fca5a5" font-size="12.5" font-weight="600">Heavy Rainfall Risk ≠ Flood Risk. Severe rain on high-slope well-drained soil drains safely; modest rain on saturated flat river catchments causes catastrophic flooding.</text>
+
+  <!-- ================= TWO SPECIALIZED HAZARD PIPELINES ================= -->
+
+  <!-- LEFT BRANCH: FLOOD RISK ENGINE -->
+  <g transform="translate(40, 185)">
+    <rect width="745" height="515" rx="12" fill="#1c1917" stroke="#ea580c" stroke-width="2" filter="url(#shadow6)"/>
+    <rect width="745" height="38" rx="12" fill="#7c2d12"/>
+    <rect y="22" width="745" height="16" fill="#7c2d12"/>
+    <text x="20" y="26" fill="#ffedd5" font-size="13" font-weight="900" letter-spacing="0.5">BRANCH 1: HYDROLOGICAL RIVER FLOOD &amp; INUNDATION ENGINE</text>
+
+    <g transform="translate(20, 52)">
+      <!-- 8 Inputs Grid -->
+      <rect width="705" height="195" rx="8" fill="#0c0a09" stroke="#ea580c" stroke-width="1"/>
+      <text x="15" y="22" fill="#fdba74" font-size="11" font-weight="800">HYDROLOGICAL TELEMETRY &amp; BASIN INPUTS (RiverFloodRiskEngine.kt)</text>
+
+      <!-- Sub input pills -->
+      <g transform="translate(15, 34)">
+        <rect width="330" height="34" rx="4" fill="#292524" stroke="#78350f"/>
+        <text x="10" y="21" fill="#fed7aa" font-size="10" font-weight="700">1. Observed Rain (AWS / Gauges):</text>
+        <text x="210" y="21" fill="#e2e8f0" font-size="10">24h sum &gt; 64.5mm</text>
+
+        <rect x="345" width="330" height="34" rx="4" fill="#292524" stroke="#78350f"/>
+        <text x="355" y="21" fill="#fed7aa" font-size="10" font-weight="700">2. Forecast Rain (NWP):</text>
+        <text x="500" y="21" fill="#e2e8f0" font-size="10">Next 24–48h predicted mm</text>
+
+        <rect y="40" width="330" height="34" rx="4" fill="#292524" stroke="#78350f"/>
+        <text x="10" y="61" fill="#fed7aa" font-size="10" font-weight="700">3. Radar Rain Rate (DWR):</text>
+        <text x="190" y="61" fill="#e2e8f0" font-size="10">Convective rate &gt; 30 mm/h</text>
+
+        <rect x="345" y="40" width="330" height="34" rx="4" fill="#292524" stroke="#78350f"/>
+        <text x="355" y="61" fill="#fed7aa" font-size="10" font-weight="700">4. CWC River Gauge Level:</text>
+        <text x="510" y="61" fill="#e2e8f0" font-size="10">Meters above mean sea level</text>
+
+        <rect y="80" width="330" height="34" rx="4" fill="#292524" stroke="#78350f"/>
+        <text x="10" y="101" fill="#fed7aa" font-size="10" font-weight="700">5. River Level Trend:</text>
+        <text x="175" y="101" fill="#e2e8f0" font-size="10">RISING / STABLE / FALLING (cm/h)</text>
+
+        <rect x="345" y="80" width="330" height="34" rx="4" fill="#292524" stroke="#78350f"/>
+        <text x="355" y="101" fill="#fed7aa" font-size="10" font-weight="700">6. Upstream Runoff Accumulation:</text>
+        <text x="555" y="101" fill="#e2e8f0" font-size="10">Lagged flow (h)</text>
+
+        <rect y="120" width="330" height="34" rx="4" fill="#292524" stroke="#78350f"/>
+        <text x="10" y="141" fill="#fed7aa" font-size="10" font-weight="700">7. Catchment Slope &amp; Saturation:</text>
+        <text x="210" y="141" fill="#e2e8f0" font-size="10">Antecedent Moisture (API)</text>
+
+        <rect x="345" y="120" width="330" height="34" rx="4" fill="#292524" stroke="#78350f"/>
+        <text x="355" y="141" fill="#fed7aa" font-size="10" font-weight="700">8. Official CWC Danger Mark:</text>
+        <text x="535" y="141" fill="#e2e8f0" font-size="10">Warning vs Danger vs HFL</text>
+      </g>
+
+      <!-- Processing Engine -->
+      <g transform="translate(0, 205)">
+        <rect width="705" height="105" rx="8" fill="#292524" stroke="#ea580c" stroke-width="1.5"/>
+        <text x="15" y="22" fill="#fed7aa" font-size="12" font-weight="800">FLOOD RISK ENGINE (RiverFloodRiskEngine &amp; FloodConfidenceEngine)</text>
+        <text x="15" y="42" fill="#e2e8f0" font-size="10.5">• Multi-factor risk calculation: Integrates river delta-H with upstream deluge</text>
+        <text x="15" y="60" fill="#e2e8f0" font-size="10.5">• Upstream propagation lag modeling: Deluge upstream arrives in 6–18 hours</text>
+        <text x="15" y="78" fill="#e2e8f0" font-size="10.5">• Evaluates Urban Waterlogging (impervious surface + drainage blockage index)</text>
+        <text x="15" y="94" fill="#fdba74" font-size="9.5">Generates Flood Risk Score: NONE (0) • LOW (1) • MODERATE (2) • HIGH (3) • SEVERE (4)</text>
+      </g>
+
+      <!-- Inundation Module -->
+      <g transform="translate(0, 320)">
+        <rect width="705" height="125" rx="8" fill="#431407" stroke="#f97316" stroke-width="2"/>
+        <text x="15" y="22" fill="#ffffff" font-size="12" font-weight="900">INUNDATION PREDICTION ENGINE (InundationPredictionEngine.kt)</text>
+        <text x="510" y="22" fill="#fed7aa" font-size="10" font-weight="600">[WHERE HYDRO PROFILES AVAILABLE]</text>
+        <text x="15" y="44" fill="#ffedd5" font-size="11">✓ Predicted Depth Range: 0.15m – 1.2m across low-lying settlement blocks</text>
+        <text x="15" y="62" fill="#ffedd5" font-size="11">✓ Inundation Onset Horizon: Estimated arrival in 45 mins to 3.5 hours</text>
+        <text x="15" y="80" fill="#ffedd5" font-size="11">✓ Inundation Duration: Expected submergence window (e.g. 18 hours)</text>
+        <text x="15" y="105" fill="#fca5a5" font-size="10" font-weight="700">Evacuation Flag: Triggered immediately if water level &gt; Danger Mark + Rising Trend</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- RIGHT BRANCH: CYCLONE RISK ENGINE -->
+  <g transform="translate(815, 185)">
+    <rect width="745" height="515" rx="12" fill="#1c1917" stroke="#dc2626" stroke-width="2" filter="url(#shadow6)"/>
+    <rect width="745" height="38" rx="12" fill="#7f1d1d"/>
+    <rect y="22" width="745" height="16" fill="#7f1d1d"/>
+    <text x="20" y="26" fill="#fee2e2" font-size="13" font-weight="900" letter-spacing="0.5">BRANCH 2: CYCLONE TRACK, WIND &amp; STORM SURGE ENGINE</text>
+
+    <g transform="translate(20, 52)">
+      <!-- 5 Cyclone Inputs Grid -->
+      <rect width="705" height="195" rx="8" fill="#0c0a09" stroke="#dc2626" stroke-width="1"/>
+      <text x="15" y="22" fill="#fca5a5" font-size="11" font-weight="800">CYCLONE TELEMETRY &amp; TROPICAL VORTEX INPUTS</text>
+
+      <g transform="translate(15, 34)">
+        <rect width="675" height="30" rx="4" fill="#27272a" stroke="#991b1b"/>
+        <text x="10" y="19" fill="#fecaca" font-size="10" font-weight="700">1. Official IMD Cyclone Bulletins &amp; Best Track:</text>
+        <text x="325" y="19" fill="#e2e8f0" font-size="10">Eye Lat/Lon, Heading (°), Forward Speed (km/h)</text>
+
+        <rect y="36" width="675" height="30" rx="4" fill="#27272a" stroke="#991b1b"/>
+        <text x="10" y="55" fill="#fecaca" font-size="10" font-weight="700">2. Vortex Intensity &amp; Pressure Deficit:</text>
+        <text x="290" y="55" fill="#e2e8f0" font-size="10">Central Pressure (hPa), ΔP &gt; 20 hPa, Max Sustained Wind</text>
+
+        <rect y="72" width="675" height="30" rx="4" fill="#27272a" stroke="#991b1b"/>
+        <text x="10" y="91" fill="#fecaca" font-size="10" font-weight="700">3. Satellite Cloud Organization:</text>
+        <text x="270" y="91" fill="#e2e8f0" font-size="10">Dvorak CI number (T2.5–T6.5), Eye Definition, Spiral Bands</text>
+
+        <rect y="108" width="675" height="30" rx="4" fill="#27272a" stroke="#991b1b"/>
+        <text x="10" y="127" fill="#fecaca" font-size="10" font-weight="700">4. Doppler Radar Outer Band Echoes:</text>
+        <text x="300" y="127" fill="#e2e8f0" font-size="10">Radius of Maximum Wind (RMW), Outer Squall Reflectivity</text>
+
+        <rect y="144" width="675" height="30" rx="4" fill="#27272a" stroke="#991b1b"/>
+        <text x="10" y="163" fill="#fecaca" font-size="10" font-weight="700">5. NWP Steering Winds &amp; Deep Shear:</text>
+        <text x="305" y="163" fill="#e2e8f0" font-size="10">500 hPa Environmental Steering flow &amp; Recurvature Track</text>
+      </g>
+
+      <!-- Processing Engine -->
+      <g transform="translate(0, 205)">
+        <rect width="705" height="105" rx="8" fill="#292524" stroke="#dc2626" stroke-width="1.5"/>
+        <text x="15" y="22" fill="#fca5a5" font-size="12" font-weight="800">TRACK &amp; IMPACT ENGINE (HazardAndFloodEngine.kt)</text>
+        <text x="15" y="42" fill="#e2e8f0" font-size="10.5">• Distance-to-Landfall Calculation: Great-circle distance between eye and user</text>
+        <text x="15" y="60" fill="#e2e8f0" font-size="10.5">• Quadrant Risk Analysis: Right-forward quadrant experiences strongest surge</text>
+        <text x="15" y="78" fill="#e2e8f0" font-size="10.5">• Coastal Buffer Gating: Coastal talukas &lt; 25km flagged for tidal inundation</text>
+        <text x="15" y="94" fill="#f87171" font-size="9.5">Classification: Deep Depression • Cyclonic Storm • Very Severe (VSCS) • Super Cyclone</text>
+      </g>
+
+      <!-- Cyclone Risk Outcome -->
+      <g transform="translate(0, 320)">
+        <rect width="705" height="125" rx="8" fill="#450a0a" stroke="#ef4444" stroke-width="2"/>
+        <text x="15" y="22" fill="#ffffff" font-size="12" font-weight="900">LOCAL CYCLONE IMPACT ADVISORY</text>
+        <text x="15" y="44" fill="#fee2e2" font-size="11">✓ Landfall ETA Window: Projected impact time ± 2 hours</text>
+        <text x="15" y="62" fill="#fee2e2" font-size="11">✓ Peak Wind Threat: Expected gust speeds (e.g. 110–130 km/h) &amp; structure damage</text>
+        <text x="15" y="80" fill="#fee2e2" font-size="11">✓ Storm Surge Height: 1.5m – 4.0m astronomical tide surge zone</text>
+        <text x="15" y="105" fill="#fca5a5" font-size="10" font-weight="700">Fisherman Advisory: Total suspension of fishing and marine operations</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= CONVERGENCE & MULTI-CHANNEL DISPATCH ================= -->
+  <!-- Convergence Lines -->
+  <path d="M 412 700 L 412 725 L 770 725 L 770 745" stroke="#f97316" stroke-width="2.5" fill="none"/>
+  <path d="M 1187 700 L 1187 725 L 830 725 L 830 745" stroke="#ef4444" stroke-width="2.5" fill="none"/>
+
+  <g transform="translate(40, 750)">
+    <rect width="1520" height="185" rx="12" fill="#0f172a" stroke="#10b981" stroke-width="2" filter="url(#shadow6)"/>
+    <rect width="1520" height="28" rx="12" fill="#065f46"/>
+    <rect y="18" width="1520" height="10" fill="#065f46"/>
+    <text x="20" y="20" fill="#ffffff" font-size="12" font-weight="900" letter-spacing="1">HAZARD SYNTHESIS, SEVERITY CLASSIFICATION &amp; MULTI-CHANNEL DISPATCH</text>
+
+    <g transform="translate(20, 38)">
+      <!-- Box 1: Geographic Polygon Matching -->
+      <rect width="350" height="130" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="15" y="22" fill="#38bdf8" font-size="11" font-weight="800">1. Spatial Polygon Matching</text>
+      <text x="15" y="40" fill="#e2e8f0" font-size="10">• Point-in-polygon containment test</text>
+      <text x="15" y="56" fill="#e2e8f0" font-size="10">• Matches user's exact village to active</text>
+      <text x="15" y="72" fill="#e2e8f0" font-size="10">  river basin and IMD warning boundary</text>
+      <text x="15" y="90" fill="#94a3b8" font-size="9.5">Prevents broadcasting irrelevant alerts</text>
+      <text x="15" y="106" fill="#38bdf8" font-size="9.5" font-weight="600">to neighboring non-impacted districts</text>
+
+      <!-- Box 2: 4-Tier Severity -->
+      <g transform="translate(370, 0)">
+        <rect width="365" height="130" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="15" y="22" fill="#facc15" font-size="11" font-weight="800">2. 4-Tier Severity Classification</text>
+        <g transform="translate(15, 34)">
+          <rect width="80" height="20" rx="3" fill="#14532d"/>
+          <text x="40" y="14" fill="#4ade80" font-size="9" font-weight="800" text-anchor="middle">GREEN (OK)</text>
+
+          <rect x="85" width="80" height="20" rx="3" fill="#713f12"/>
+          <text x="125" y="14" fill="#fde047" font-size="9" font-weight="800" text-anchor="middle">YELLOW</text>
+
+          <rect x="170" width="80" height="20" rx="3" fill="#7c2d12"/>
+          <text x="210" y="14" fill="#fdba74" font-size="9" font-weight="800" text-anchor="middle">ORANGE</text>
+
+          <rect x="255" width="80" height="20" rx="3" fill="#7f1d1d"/>
+          <text x="295" y="14" fill="#fca5a5" font-size="9" font-weight="800" text-anchor="middle">RED (ACT)</text>
+        </g>
+        <text x="15" y="78" fill="#cbd5e1" font-size="10">Official IMD &amp; NDMA color convention</text>
+        <text x="15" y="94" fill="#cbd5e1" font-size="10">Calculates overall multi-hazard risk index</text>
+        <text x="15" y="112" fill="#facc15" font-size="9.5" font-weight="600">Deterministic mapping based on thresholds</text>
+      </g>
+
+      <!-- Box 3: Deduplication & Escalation -->
+      <g transform="translate(755, 0)">
+        <rect width="365" height="130" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="15" y="22" fill="#ec4899" font-size="11" font-weight="800">3. Deduplication &amp; Escalation</text>
+        <text x="15" y="40" fill="#e2e8f0" font-size="10">• Suppresses repeated alerts within 60-min TTL</text>
+        <text x="15" y="56" fill="#e2e8f0" font-size="10">• Anti-alert fatigue algorithm</text>
+        <text x="15" y="72" fill="#e2e8f0" font-size="10">• Instant Escalation Override: If river crosses</text>
+        <text x="15" y="88" fill="#e2e8f0" font-size="10">  Danger Level or Cyclone eye shifts closer</text>
+        <text x="15" y="106" fill="#ec4899" font-size="9.5" font-weight="600">Code Ref: AlertPriorityManager.kt</text>
+      </g>
+
+      <!-- Box 4: Multi-Channel Dispatch -->
+      <g transform="translate(1140, 0)">
+        <rect width="340" height="130" rx="8" fill="#064e3b" stroke="#22c55e" stroke-width="1.2"/>
+        <text x="15" y="22" fill="#86efac" font-size="11" font-weight="800">4. Multi-Channel Dispatch</text>
+        <text x="15" y="40" fill="#f0fdf4" font-size="10">📱 Android In-App High-Priority Banner</text>
+        <text x="15" y="56" fill="#f0fdf4" font-size="10">🔊 Indian Language Audio Alarm (TTS)</text>
+        <text x="15" y="72" fill="#f0fdf4" font-size="10">🌐 n8n Webhook: SMS &amp; Telegram Gateway</text>
+        <text x="15" y="90" fill="#bbf7d0" font-size="9.5">⚡ Offline Cache update for rural users</text>
+        <text x="15" y="108" fill="#4ade80" font-size="9.5" font-weight="700">Latency: Dispatched in &lt; 1.5 seconds</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= FOOTER ================= -->
+  <g transform="translate(40, 995)">
+    <line x1="0" y1="0" x2="1520" y2="0" stroke="#334155" stroke-width="1"/>
+    <text x="0" y="25" fill="#38bdf8" font-size="12" font-weight="800">WeatherGPT | SIH 2026 | PS-68 | Ministry of Earth Sciences</text>
+    <text x="760" y="25" fill="#facc15" font-size="12" font-weight="700" text-anchor="middle">Data → Intelligence → Forecast → Risk → Action</text>
+    <text x="1520" y="25" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">Production Implementation • Zero-Hallucination Architecture</text>
+  </g>
+</svg>

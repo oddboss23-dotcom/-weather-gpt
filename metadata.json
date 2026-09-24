@@ -1,0 +1,6 @@
+{
+  "name": "WeatherGPT",
+  "description": "Indian Weather Intelligence & Decision Support Platform with real-time forecasting, AI analysis, GIS radar, disaster safety alerts, and multilingual voice assistance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

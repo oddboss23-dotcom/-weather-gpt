@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WeatherGPT</string>
+    <string name="app_tagline">Indian Weather Intelligence &amp; Decision Support</string>
+    <string name="nav_weather">Weather</string>
+    <string name="nav_radar">Radar &amp; GIS</string>
+    <string name="nav_krishi">Krishi</string>
+    <string name="nav_alerts">Safety &amp; Alerts</string>
+    <string name="nav_profile">Profile</string>
+</resources>

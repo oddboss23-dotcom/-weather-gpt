@@ -1,0 +1,272 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1050" width="100%" height="100%" style="background:#0b0f19; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <marker id="arrowR" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrowS" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#06b6d4"/>
+    </marker>
+    <marker id="arrowN" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrowP" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#a855f7"/>
+    </marker>
+    <filter id="shadow4" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1050" fill="url(#bgGrad4)"/>
+
+  <!-- Header Banner -->
+  <rect x="40" y="30" width="1520" height="80" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow4)"/>
+  <text x="70" y="66" fill="#f8fafc" font-size="22" font-weight="800">DIAGRAM 4: RADAR, SATELLITE &amp; NWP TRI-PIPELINE INTEGRATION</text>
+  <text x="70" y="90" fill="#94a3b8" font-size="13">Rigorous Meteorological Specialization: High-Frequency Radar Nowcasting + Synoptic Satellite + Physics NWP Grid</text>
+  <rect x="1270" y="48" width="260" height="42" rx="6" fill="#0f172a" stroke="#a855f7" stroke-width="1.2"/>
+  <text x="1400" y="74" fill="#c084fc" font-size="12" font-weight="700" text-anchor="middle">PHYSICS-BASED FUSION</text>
+
+  <!-- ================= 3 PARALLEL TECHNICAL PIPELINES ================= -->
+
+  <!-- PIPELINE 1: RADAR (DWR) -->
+  <g transform="translate(40, 130)">
+    <rect width="480" height="610" rx="12" fill="#18181b" stroke="#ef4444" stroke-width="2" filter="url(#shadow4)"/>
+    <rect width="480" height="42" rx="12" fill="#7f1d1d"/>
+    <rect y="26" width="480" height="16" fill="#7f1d1d"/>
+    <text x="20" y="28" fill="#fee2e2" font-size="13" font-weight="900" letter-spacing="0.5">PIPELINE 1: DOPPLER WEATHER RADAR (DWR)</text>
+    <rect x="375" y="8" width="90" height="26" rx="4" fill="#991b1b"/>
+    <text x="420" y="25" fill="#fca5a5" font-size="10" font-weight="800" text-anchor="middle">0–3h ONLY</text>
+
+    <g transform="translate(20, 56)">
+      <!-- Step 1 -->
+      <rect width="440" height="65" rx="6" fill="#27272a" stroke="#ef4444" stroke-width="1"/>
+      <text x="15" y="22" fill="#fca5a5" font-size="11" font-weight="800">1. Radar Telemetry Ingestion</text>
+      <text x="15" y="38" fill="#e4e4e7" font-size="10">IMD Doppler Network (32+ Stations: Delhi, Mumbai, Chennai, etc.)</text>
+      <text x="15" y="52" fill="#a1a1aa" font-size="9">Scan Volume: C-Band / S-Band Volumetric Polarimetric Elevation Scans</text>
+
+      <line x1="220" y1="65" x2="220" y2="82" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowR)"/>
+
+      <!-- Step 2 -->
+      <rect y="84" width="440" height="65" rx="6" fill="#27272a" stroke="#ef4444" stroke-width="1"/>
+      <text x="15" y="106" fill="#fca5a5" font-size="11" font-weight="800">2. Reflectivity (dBZ) &amp; Radial Velocity Extraction</text>
+      <text x="15" y="122" fill="#e4e4e7" font-size="10">Base Reflectivity Factor (Z) Range: 10 to 65+ dBZ</text>
+      <text x="15" y="136" fill="#a1a1aa" font-size="9">Doppler Radial Velocity (VAD) Wind Profile • Clutter filtering</text>
+
+      <line x1="220" y1="149" x2="220" y2="166" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowR)"/>
+
+      <!-- Step 3 -->
+      <rect y="168" width="440" height="65" rx="6" fill="#27272a" stroke="#ef4444" stroke-width="1"/>
+      <text x="15" y="190" fill="#fca5a5" font-size="11" font-weight="800">3. Precipitation Rate Estimation (Marshall-Palmer Z-R)</text>
+      <text x="15" y="206" fill="#e4e4e7" font-size="10">Stratiform: Z = 200 · R^1.6 | Convective: Z = 300 · R^1.4</text>
+      <text x="15" y="220" fill="#a1a1aa" font-size="9">Converts volumetric echo intensity into instantaneous rainfall rate (mm/h)</text>
+
+      <line x1="220" y1="233" x2="220" y2="250" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowR)"/>
+
+      <!-- Step 4 -->
+      <rect y="252" width="440" height="65" rx="6" fill="#27272a" stroke="#ef4444" stroke-width="1"/>
+      <text x="15" y="274" fill="#fca5a5" font-size="11" font-weight="800">4. Rain Cell Identification &amp; Centroid Tracking (TITAN)</text>
+      <text x="15" y="290" fill="#e4e4e7" font-size="10">Clusters connected echoes &gt; 35 dBZ into discrete thunderstorm cells</text>
+      <text x="15" y="304" fill="#a1a1aa" font-size="9">Computes cell centroid (Lat/Lon), volume, and cloud top height</text>
+
+      <line x1="220" y1="317" x2="220" y2="334" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowR)"/>
+
+      <!-- Step 5 -->
+      <rect y="336" width="440" height="65" rx="6" fill="#27272a" stroke="#ef4444" stroke-width="1"/>
+      <text x="15" y="358" fill="#fca5a5" font-size="11" font-weight="800">5. Cell Motion Vector &amp; Speed Extrapolation</text>
+      <text x="15" y="374" fill="#e4e4e7" font-size="10">Cross-correlation of consecutive 10-min scans → Velocity vector (km/h)</text>
+      <text x="15" y="388" fill="#a1a1aa" font-size="9">Determines precise path vector and arrival cone for downwind districts</text>
+
+      <line x1="220" y1="401" x2="220" y2="418" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowR)"/>
+
+      <!-- Step 6 -->
+      <rect y="420" width="440" height="115" rx="6" fill="#3f0f0f" stroke="#ef4444" stroke-width="1.5"/>
+      <text x="15" y="442" fill="#ffffff" font-size="12" font-weight="900">6. Radar Output: 0–3h Nowcast Grid</text>
+      <text x="15" y="460" fill="#fecaca" font-size="10">• Spatial Resolution: 500m – 1km</text>
+      <text x="15" y="475" fill="#fecaca" font-size="10">• Temporal Update: 10–15 minutes</text>
+      <text x="15" y="490" fill="#fecaca" font-size="10">• Output: Exact Rain Start ETA, Peak Rate mm/h, Gust warning</text>
+      <text x="15" y="515" fill="#fca5a5" font-size="9.5" font-weight="700">Crucial: Radar CANNOT forecast beyond 3 hours (Echo decay)</text>
+    </g>
+  </g>
+
+  <!-- PIPELINE 2: SATELLITE (INSAT-3D / GPM) -->
+  <g transform="translate(560, 130)">
+    <rect width="480" height="610" rx="12" fill="#082f49" stroke="#06b6d4" stroke-width="2" filter="url(#shadow4)"/>
+    <rect width="480" height="42" rx="12" fill="#0e7490"/>
+    <rect y="26" width="480" height="16" fill="#0e7490"/>
+    <text x="20" y="28" fill="#cffafe" font-size="13" font-weight="900" letter-spacing="0.5">PIPELINE 2: INSAT-3D / 3DR &amp; GPM SATELLITE</text>
+    <rect x="375" y="8" width="90" height="26" rx="4" fill="#0891b2"/>
+    <text x="420" y="25" fill="#e0f2fe" font-size="10" font-weight="800" text-anchor="middle">SYNOPTIC</text>
+
+    <g transform="translate(20, 56)">
+      <!-- Step 1 -->
+      <rect width="440" height="65" rx="6" fill="#0c4a6e" stroke="#06b6d4" stroke-width="1"/>
+      <text x="15" y="22" fill="#a5f3fc" font-size="11" font-weight="800">1. Multispectral Radiometer Telemetry</text>
+      <text x="15" y="38" fill="#e0f2fe" font-size="10">INSAT-3D Imager: Thermal IR (TIR1, TIR2), Water Vapor (WV, 6.7µm)</text>
+      <text x="15" y="52" fill="#7dd3fc" font-size="9">Coverage: Full Indian Ocean Subcontinent &amp; Marine Exclusive Economic Zone</text>
+
+      <line x1="220" y1="65" x2="220" y2="82" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowS)"/>
+
+      <!-- Step 2 -->
+      <rect y="84" width="440" height="65" rx="6" fill="#0c4a6e" stroke="#06b6d4" stroke-width="1"/>
+      <text x="15" y="106" fill="#a5f3fc" font-size="11" font-weight="800">2. Cloud Detection &amp; Brightness Temperature (BT)</text>
+      <text x="15" y="122" fill="#e0f2fe" font-size="10">Cloud Top Temperature (CTT) Mapping: Detects deep convection</text>
+      <text x="15" y="136" fill="#7dd3fc" font-size="9">Threshold: CTT &lt; -40°C indicates towering cumulonimbus / storm tops</text>
+
+      <line x1="220" y1="149" x2="220" y2="166" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowS)"/>
+
+      <!-- Step 3 -->
+      <rect y="168" width="440" height="65" rx="6" fill="#0c4a6e" stroke="#06b6d4" stroke-width="1"/>
+      <text x="15" y="190" fill="#a5f3fc" font-size="11" font-weight="800">3. Cloud Motion Vectors (CMV) &amp; Moisture Winds</text>
+      <text x="15" y="206" fill="#e0f2fe" font-size="10">Atmospheric Motion Vectors derived from consecutive water-vapor frames</text>
+      <text x="15" y="220" fill="#7dd3fc" font-size="9">Monitors upper-level divergence and tropospheric moisture advection</text>
+
+      <line x1="220" y1="233" x2="220" y2="250" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowS)"/>
+
+      <!-- Step 4 -->
+      <rect y="252" width="440" height="65" rx="6" fill="#0c4a6e" stroke="#06b6d4" stroke-width="1"/>
+      <text x="15" y="274" fill="#a5f3fc" font-size="11" font-weight="800">4. Satellite Precipitation Products (HEM / IMS-RA)</text>
+      <text x="15" y="290" fill="#e0f2fe" font-size="10">Hydro-Estimator Method (HEM) calculates quantitative rain rates</text>
+      <text x="15" y="304" fill="#7dd3fc" font-size="9">GPM Dual-frequency Precipitation Radar cross-validates rainbands</text>
+
+      <line x1="220" y1="317" x2="220" y2="334" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowS)"/>
+
+      <!-- Step 5 -->
+      <rect y="336" width="440" height="65" rx="6" fill="#0c4a6e" stroke="#06b6d4" stroke-width="1"/>
+      <text x="15" y="358" fill="#a5f3fc" font-size="11" font-weight="800">5. Cyclone Monitoring &amp; Dvorak T-Number</text>
+      <text x="15" y="374" fill="#e0f2fe" font-size="10">Analyzes curved band pattern, central dense overcast (CDO), and eye</text>
+      <text x="15" y="388" fill="#7dd3fc" font-size="9">Computes cyclone intensity (T1.0 to T8.0) and central pressure deficit</text>
+
+      <line x1="220" y1="401" x2="220" y2="418" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowS)"/>
+
+      <!-- Step 6 -->
+      <rect y="420" width="440" height="115" rx="6" fill="#034561" stroke="#06b6d4" stroke-width="1.5"/>
+      <text x="15" y="442" fill="#ffffff" font-size="12" font-weight="900">6. Satellite Output: Subcontinental Grid</text>
+      <text x="15" y="460" fill="#bae6fd" font-size="10">• Spatial Resolution: 4km (IR) / 1km (Visible)</text>
+      <text x="15" y="475" fill="#bae6fd" font-size="10">• Temporal Cadence: 15–30 minutes</text>
+      <text x="15" y="490" fill="#bae6fd" font-size="10">• Bridges gaps in radar coverage over oceans &amp; rural regions</text>
+      <text x="15" y="515" fill="#67e8f9" font-size="9.5" font-weight="700">Provides essential regional cloud system tracking (1–6h)</text>
+    </g>
+  </g>
+
+  <!-- PIPELINE 3: NWP (GFS / ECMWF) -->
+  <g transform="translate(1080, 130)">
+    <rect width="480" height="610" rx="12" fill="#0f172a" stroke="#3b82f6" stroke-width="2" filter="url(#shadow4)"/>
+    <rect width="480" height="42" rx="12" fill="#1e3a8a"/>
+    <rect y="26" width="480" height="16" fill="#1e3a8a"/>
+    <text x="20" y="28" fill="#dbeafe" font-size="13" font-weight="900" letter-spacing="0.5">PIPELINE 3: NUMERICAL WEATHER PREDICTION (NWP)</text>
+    <rect x="375" y="8" width="90" height="26" rx="4" fill="#2563eb"/>
+    <text x="420" y="25" fill="#eff6ff" font-size="10" font-weight="800" text-anchor="middle">3–48h PHYSICS</text>
+
+    <g transform="translate(20, 56)">
+      <!-- Step 1 -->
+      <rect width="440" height="65" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+      <text x="15" y="22" fill="#93c5fd" font-size="11" font-weight="800">1. Global Model Ingest (GFS / ECMWF-IFS)</text>
+      <text x="15" y="38" fill="#e2e8f0" font-size="10">Global dynamical core solving primitive atmospheric Navier-Stokes equations</text>
+      <text x="15" y="52" fill="#60a5fa" font-size="9">Ingests GFS 0.25° and ECMWF 9-km high-resolution deterministic models</text>
+
+      <line x1="220" y1="65" x2="220" y2="82" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowN)"/>
+
+      <!-- Step 2 -->
+      <rect y="84" width="440" height="65" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+      <text x="15" y="106" fill="#93c5fd" font-size="11" font-weight="800">2. High-Resolution Downscaled Surface Grid</text>
+      <text x="15" y="122" fill="#e2e8f0" font-size="10">Open-Meteo downscaling engine interpolates to 1-km spatial resolution</text>
+      <text x="15" y="136" fill="#60a5fa" font-size="9">Applies high-resolution digital elevation models (SRTM / Copernicus DEM)</text>
+
+      <line x1="220" y1="149" x2="220" y2="166" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowN)"/>
+
+      <!-- Step 3 -->
+      <rect y="168" width="440" height="65" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+      <text x="15" y="190" fill="#93c5fd" font-size="11" font-weight="800">3. Physical Surface Parameter Extraction</text>
+      <text x="15" y="206" fill="#e2e8f0" font-size="10">2m Temperature, 2m Dewpoint, 10m Wind Speed/Gusts, MSLP</text>
+      <text x="15" y="220" fill="#60a5fa" font-size="9">Total precipitation accumulation (liquid + convective components)</text>
+
+      <line x1="220" y1="233" x2="220" y2="250" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowN)"/>
+
+      <!-- Step 4 -->
+      <rect y="252" width="440" height="65" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+      <text x="15" y="274" fill="#93c5fd" font-size="11" font-weight="800">4. Spatial Bilinear Interpolation &amp; Topo Lapse Rates</text>
+      <text x="15" y="290" fill="#e2e8f0" font-size="10">Maps continuous grid cells to discrete village Lat/Lon coordinates</text>
+      <text x="15" y="304" fill="#60a5fa" font-size="9">Applies standard lapse rate adjustment (-6.5°C / 1000m elevation)</text>
+
+      <line x1="220" y1="317" x2="220" y2="334" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowN)"/>
+
+      <!-- Step 5 -->
+      <rect y="336" width="440" height="65" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+      <text x="15" y="358" fill="#93c5fd" font-size="11" font-weight="800">5. Ensemble Disagreement &amp; Spread Calculation</text>
+      <text x="15" y="374" fill="#e2e8f0" font-size="10">Evaluates variance between GFS, ECMWF, and regional models</text>
+      <text x="15" y="388" fill="#60a5fa" font-size="9">High spread triggers lower confidence score in extended horizon</text>
+
+      <line x1="220" y1="401" x2="220" y2="418" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowN)"/>
+
+      <!-- Step 6 -->
+      <rect y="420" width="440" height="115" rx="6" fill="#172554" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="15" y="442" fill="#ffffff" font-size="12" font-weight="900">6. NWP Output: 3–48h Forecast Engine</text>
+      <text x="15" y="460" fill="#bfdbfe" font-size="10">• Spatial Resolution: 1km – 5km interpolated</text>
+      <text x="15" y="475" fill="#bfdbfe" font-size="10">• Horizon: Hourly out to 48 hours &amp; 7 days</text>
+      <text x="15" y="490" fill="#bfdbfe" font-size="10">• Output: Diurnal cycle, synoptic frontal boundaries, rainfall sums</text>
+      <text x="15" y="515" fill="#93c5fd" font-size="9.5" font-weight="700">Crucial: GFS is a mathematical grid simulation — NEVER a chatbot</text>
+    </g>
+  </g>
+
+  <!-- ================= CONVERGENCE ZONE: MULTI-SOURCE FUSION ================= -->
+  <!-- Convergence Lines -->
+  <path d="M 280 740 L 280 765 L 750 765 L 750 790" stroke="#ef4444" stroke-width="2.5" fill="none"/>
+  <path d="M 800 740 L 800 790" stroke="#06b6d4" stroke-width="2.5" fill="none"/>
+  <path d="M 1320 740 L 1320 765 L 850 765 L 850 790" stroke="#3b82f6" stroke-width="2.5" fill="none"/>
+
+  <g transform="translate(40, 795)">
+    <rect width="1520" height="135" rx="12" fill="#2e1065" stroke="#a855f7" stroke-width="2" filter="url(#shadow4)"/>
+    <rect width="1520" height="28" rx="12" fill="#581c87"/>
+    <rect y="18" width="1520" height="10" fill="#581c87"/>
+    <text x="20" y="20" fill="#f3e8ff" font-size="13" font-weight="900" letter-spacing="1">MULTI-SOURCE DATA FUSION ENGINE (WEIGHTED TEMPORAL RECONCILIATION)</text>
+
+    <g transform="translate(20, 38)">
+      <!-- Box 1 -->
+      <rect width="355" height="85" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+      <text x="15" y="20" fill="#e9d5ff" font-size="11" font-weight="800">1. Spatial Alignment &amp; Resampling</text>
+      <text x="15" y="38" fill="#d8b4fe" font-size="10">Projects Radar polar coords (r, θ), Satellite</text>
+      <text x="15" y="52" fill="#d8b4fe" font-size="10">projection, and NWP lat/lon grids onto</text>
+      <text x="15" y="66" fill="#c084fc" font-size="9.5">Unified WGS84 Geographic Coordinate System</text>
+
+      <!-- Box 2 -->
+      <g transform="translate(370, 0)">
+        <rect width="365" height="85" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+        <text x="15" y="20" fill="#e9d5ff" font-size="11" font-weight="800">2. Time-Decay Weighting Function</text>
+        <text x="15" y="38" fill="#d8b4fe" font-size="10">t = 0–1h: W_radar = 0.70, W_nwp = 0.10</text>
+        <text x="15" y="52" fill="#d8b4fe" font-size="10">t = 1–3h: W_radar = 0.40, W_sat = 0.35, W_nwp = 0.25</text>
+        <text x="15" y="66" fill="#c084fc" font-size="9.5">t = 3–48h: W_nwp = 0.85, W_climatology = 0.15</text>
+      </g>
+
+      <!-- Box 3 -->
+      <g transform="translate(750, 0)">
+        <rect width="365" height="85" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+        <text x="15" y="20" fill="#e9d5ff" font-size="11" font-weight="800">3. Conflict Resolution &amp; Anomaly Filter</text>
+        <text x="15" y="38" fill="#d8b4fe" font-size="10">If NWP predicts 0mm rain but Radar sees &gt;45 dBZ</text>
+        <text x="15" y="52" fill="#d8b4fe" font-size="10">→ Immediate Override with Radar Nowcast</text>
+        <text x="15" y="66" fill="#c084fc" font-size="9.5">Prevents missing dangerous localized cloudbursts</text>
+      </g>
+
+      <!-- Box 4 -->
+      <g transform="translate(1130, 0)">
+        <rect width="350" height="85" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+        <text x="15" y="20" fill="#86efac" font-size="11" font-weight="800">4. Canonical Weather Snapshot</text>
+        <text x="15" y="38" fill="#bbf7d0" font-size="10">Generates unified payload containing:</text>
+        <text x="15" y="52" fill="#bbf7d0" font-size="10">Real-time Obs + 0-3h Nowcast + 48h Forecast</text>
+        <text x="15" y="68" fill="#86efac" font-size="9.5" font-weight="700">Passed to UI, Voice Assistant &amp; KrishiGPT</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= FOOTER ================= -->
+  <g transform="translate(40, 995)">
+    <line x1="0" y1="0" x2="1520" y2="0" stroke="#334155" stroke-width="1"/>
+    <text x="0" y="25" fill="#38bdf8" font-size="12" font-weight="800">WeatherGPT | SIH 2026 | PS-68 | Ministry of Earth Sciences</text>
+    <text x="760" y="25" fill="#facc15" font-size="12" font-weight="700" text-anchor="middle">Data → Intelligence → Forecast → Risk → Action</text>
+    <text x="1520" y="25" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">Production Implementation • Zero-Hallucination Architecture</text>
+  </g>
+</svg>

@@ -1,0 +1,62 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Radar Sweep Glow Arc -->
+    <path
+        android:pathData="M54,54 L84,24 A42,42 0 0,0 54,12 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="54"
+                android:startY="54"
+                android:endX="75"
+                android:endY="20"
+                android:type="linear">
+                <item android:color="#5500F0FF" android:offset="0.0" />
+                <item android:color="#0000F0FF" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Radar Sweep Line -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M54,54 L84,24"
+        android:strokeWidth="1.5"
+        android:strokeColor="#00F0FF" />
+
+    <!-- Modern Weather Cloud -->
+    <path
+        android:pathData="M38,62 C34.7,62 32,59.3 32,56 C32,53.2 33.9,50.9 36.6,50.2 C36.2,49.2 36,48.1 36,47 C36,41.5 40.5,37 46,37 C49.8,37 53.1,39.1 54.8,42.2 C56.2,40.8 58.2,40 60.5,40 C65.2,40 69,43.8 69,48.5 C69,49.1 68.9,49.6 68.8,50.1 C72.3,50.8 75,53.8 75,57.5 C75,61.6 71.6,65 67.5,65 L38,65 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="32"
+                android:startY="37"
+                android:endX="75"
+                android:endY="65"
+                android:type="linear">
+                <item android:color="#FFFFFF" android:offset="0.0" />
+                <item android:color="#E0F7FA" android:offset="0.5" />
+                <item android:color="#80DEEA" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Lightning Bolt / AI Energy Accent -->
+    <path
+        android:pathData="M52,56 L47,68 L53,68 L49,78 L61,64 L55,64 Z"
+        android:fillColor="#00F0FF"
+        android:strokeWidth="0.5"
+        android:strokeColor="#FFFFFF" />
+
+    <!-- AI Sparkle / Satellite Nodes -->
+    <path
+        android:pathData="M72,34 L73.5,38.5 L78,40 L73.5,41.5 L72,46 L70.5,41.5 L66,40 L70.5,38.5 Z"
+        android:fillColor="#00E5FF" />
+    <path
+        android:pathData="M32,32 L33,35 L36,36 L33,37 L32,40 L31,37 L28,36 L31,35 Z"
+        android:fillColor="#38BDF8" />
+</vector>

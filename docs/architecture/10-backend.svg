@@ -1,0 +1,326 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="100%" height="100%" style="background:#0b0f19; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad10" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <marker id="arrowB10" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowP10" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#a855f7"/>
+    </marker>
+    <marker id="arrowG10" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#10b981"/>
+    </marker>
+    <filter id="shadow10" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1100" fill="url(#bgGrad10)"/>
+
+  <!-- Header Banner -->
+  <rect x="40" y="30" width="1520" height="80" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow10)"/>
+  <text x="70" y="66" fill="#f8fafc" font-size="22" font-weight="800">DIAGRAM 10: BACKEND, MICROSERVICES &amp; PERSISTENCE ARCHITECTURE</text>
+  <text x="70" y="90" fill="#94a3b8" font-size="13">Enterprise Scalability: External Integrations • Ingestion Gateway • 10 Specialized Microservices • Room Local Cache &amp; Cloud Persistence</text>
+  <rect x="1270" y="48" width="260" height="42" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2"/>
+  <text x="1400" y="74" fill="#38bdf8" font-size="12" font-weight="700" text-anchor="middle">SYSTEM TOPOLOGY</text>
+
+  <!-- ================= TIER 1: EXTERNAL INTEGRATIONS ================= -->
+  <g transform="translate(40, 130)">
+    <rect width="1520" height="90" rx="10" fill="#0f172a" stroke="#1d4ed8" stroke-width="1.5" filter="url(#shadow10)"/>
+    <rect width="1520" height="26" rx="10" fill="#1e3a8a"/>
+    <rect y="16" width="1520" height="10" fill="#1e3a8a"/>
+    <text x="20" y="19" fill="#bfdbfe" font-size="12" font-weight="800" letter-spacing="1">TIER 1: EXTERNAL INTEGRATIONS &amp; AUTHORITATIVE TELEMETRY SOURCES</text>
+
+    <g transform="translate(15, 36)">
+      <rect width="285" height="42" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+      <text x="142" y="20" fill="#93c5fd" font-size="11" font-weight="700" text-anchor="middle">IMD (India Meteorological Dept)</text>
+      <text x="142" y="34" fill="#64748b" font-size="9" text-anchor="middle">Synoptic Observations • 32 DWR Radars • CAP Warnings</text>
+
+      <rect x="300" width="285" height="42" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+      <text x="442" y="20" fill="#93c5fd" font-size="11" font-weight="700" text-anchor="middle">Open-Meteo High-Res API</text>
+      <text x="442" y="34" fill="#64748b" font-size="9" text-anchor="middle">1-km Downscaled Ensemble • GFS / ECMWF Physical Grids</text>
+
+      <rect x="600" width="295" height="42" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+      <text x="747" y="20" fill="#93c5fd" font-size="11" font-weight="700" text-anchor="middle">CWC (Central Water Commission)</text>
+      <text x="747" y="34" fill="#64748b" font-size="9" text-anchor="middle">National Hydrological River Gauges &amp; Danger Levels</text>
+
+      <rect x="910" width="290" height="42" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+      <text x="1055" y="20" fill="#93c5fd" font-size="11" font-weight="700" text-anchor="middle">Google Gemini AI REST API</text>
+      <text x="1055" y="34" fill="#64748b" font-size="9" text-anchor="middle">Gemini 1.5 Pro / Flash • Zero-Hallucination Explainer</text>
+
+      <rect x="1215" width="290" height="42" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+      <text x="1360" y="20" fill="#93c5fd" font-size="11" font-weight="700" text-anchor="middle">n8n Disaster Alert Webhooks</text>
+      <text x="1360" y="34" fill="#64748b" font-size="9" text-anchor="middle">Automated Push • SMS Telephony • Panchayat Sirens</text>
+    </g>
+  </g>
+
+  <!-- Arrow down to Ingestion -->
+  <line x1="800" y1="220" x2="800" y2="242" stroke="#0ea5e9" stroke-width="2" marker-end="url(#arrowB10)"/>
+
+  <!-- ================= TIER 2: INGESTION & API GATEWAY LAYER ================= -->
+  <g transform="translate(40, 245)">
+    <rect width="1520" height="75" rx="10" fill="#082f49" stroke="#0284c7" stroke-width="1.5" filter="url(#shadow10)"/>
+    <rect width="1520" height="24" rx="10" fill="#0369a1"/>
+    <rect y="14" width="1520" height="10" fill="#0369a1"/>
+    <text x="20" y="17" fill="#bae6fd" font-size="12" font-weight="800" letter-spacing="1">TIER 2: API GATEWAY, INGESTION CONTROLLERS &amp; SECRETS VAULT</text>
+
+    <g transform="translate(15, 32)">
+      <rect width="285" height="34" rx="5" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1"/>
+      <text x="142" y="21" fill="#e0f2fe" font-size="10" font-weight="700" text-anchor="middle">Reverse Proxy &amp; Load Balancer</text>
+
+      <rect x="300" width="285" height="34" rx="5" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1"/>
+      <text x="442" y="21" fill="#e0f2fe" font-size="10" font-weight="700" text-anchor="middle">Secrets Plugin &amp; BuildConfig Vault</text>
+
+      <rect x="600" width="295" height="34" rx="5" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1"/>
+      <text x="747" y="21" fill="#e0f2fe" font-size="10" font-weight="700" text-anchor="middle">Rate Limiter &amp; Resilient Exponential Backoff</text>
+
+      <rect x="910" width="290" height="34" rx="5" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1"/>
+      <text x="1055" y="21" fill="#e0f2fe" font-size="10" font-weight="700" text-anchor="middle">Schema Validation &amp; Timestamp Auditing</text>
+
+      <rect x="1215" width="290" height="34" rx="5" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1"/>
+      <text x="1360" y="21" fill="#e0f2fe" font-size="10" font-weight="700" text-anchor="middle">Source Health Checker &amp; Circuit Breaker</text>
+    </g>
+  </g>
+
+  <!-- Arrow down to Services -->
+  <line x1="800" y1="320" x2="800" y2="342" stroke="#a855f7" stroke-width="2" marker-end="url(#arrowP10)"/>
+
+  <!-- ================= TIER 3: SERVICE LAYER (10 SERVICES) ================= -->
+  <g transform="translate(40, 345)">
+    <rect width="1520" height="235" rx="12" fill="#2e1065" stroke="#9333ea" stroke-width="1.5" filter="url(#shadow10)"/>
+    <rect width="1520" height="28" rx="12" fill="#581c87"/>
+    <rect y="18" width="1520" height="10" fill="#581c87"/>
+    <text x="20" y="20" fill="#f3e8ff" font-size="12" font-weight="900" letter-spacing="1">TIER 3: CORE INTELLIGENCE SERVICES (DOMAIN LOGIC LAYER)</text>
+
+    <!-- 10 Service Boxes (2 rows of 5) -->
+    <g transform="translate(15, 38)">
+      <!-- Service 1: Weather Service -->
+      <rect width="285" height="85" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+      <text x="15" y="20" fill="#f3e8ff" font-size="11" font-weight="800">1. Weather Service</text>
+      <text x="15" y="36" fill="#e9d5ff" font-size="9.5">CanonicalWeatherRepository.kt</text>
+      <text x="15" y="52" fill="#cbd5e1" font-size="9">• Orchestrates all data pipelines</text>
+      <text x="15" y="66" fill="#cbd5e1" font-size="9">• Produces CanonicalWeatherSnapshot</text>
+      <text x="15" y="78" fill="#a855f7" font-size="8.5">Single entry point for all UI views</text>
+
+      <!-- Service 2: Location Service -->
+      <g transform="translate(300, 0)">
+        <rect width="285" height="85" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+        <text x="15" y="20" fill="#f3e8ff" font-size="11" font-weight="800">2. Location Service</text>
+        <text x="15" y="36" fill="#e9d5ff" font-size="9.5">CanonicalLocationResolver.kt</text>
+        <text x="15" y="52" fill="#cbd5e1" font-size="9">• Hierarchical State → Block → Village</text>
+        <text x="15" y="66" fill="#cbd5e1" font-size="9">• Indian Administrative Gazetteer</text>
+        <text x="15" y="78" fill="#a855f7" font-size="8.5">Terrain classification &amp; river basin ID</text>
+      </g>
+
+      <!-- Service 3: Forecast Service -->
+      <g transform="translate(600, 0)">
+        <rect width="295" height="85" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+        <text x="15" y="20" fill="#f3e8ff" font-size="11" font-weight="800">3. Forecast &amp; Nowcast Service</text>
+        <text x="15" y="36" fill="#e9d5ff" font-size="9.5">ForecastVerificationEngine.kt</text>
+        <text x="15" y="52" fill="#cbd5e1" font-size="9">• 0-3h Nowcasting &amp; 48h Hourly Grid</text>
+        <text x="15" y="66" fill="#cbd5e1" font-size="9">• Forecast Bust Detection Logic</text>
+        <text x="15" y="78" fill="#a855f7" font-size="8.5">Calculates Brier &amp; RMSE skill scores</text>
+      </g>
+
+      <!-- Service 4: Radar / Satellite Service -->
+      <g transform="translate(910, 0)">
+        <rect width="290" height="85" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+        <text x="15" y="20" fill="#f3e8ff" font-size="11" font-weight="800">4. Radar &amp; Satellite Service</text>
+        <text x="15" y="36" fill="#e9d5ff" font-size="9.5">GisRadarRepository.kt</text>
+        <text x="15" y="52" fill="#cbd5e1" font-size="9">• 32 DWR Radars Z-R precipitation</text>
+        <text x="15" y="66" fill="#cbd5e1" font-size="9">• INSAT-3D CTT &amp; cloud motion vectors</text>
+        <text x="15" y="78" fill="#a855f7" font-size="8.5">Polar-to-cartesian spatial projection</text>
+      </g>
+
+      <!-- Service 5: Flood / Hydrology Service -->
+      <g transform="translate(1215, 0)">
+        <rect width="290" height="85" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+        <text x="15" y="20" fill="#f3e8ff" font-size="11" font-weight="800">5. Flood &amp; Hydrology Service</text>
+        <text x="15" y="36" fill="#e9d5ff" font-size="9.5">RiverFloodRiskEngine.kt</text>
+        <text x="15" y="52" fill="#cbd5e1" font-size="9">• 120+ CWC river gauges monitoring</text>
+        <text x="15" y="66" fill="#cbd5e1" font-size="9">• Inundation depth &amp; arrival onset</text>
+        <text x="15" y="78" fill="#a855f7" font-size="8.5">Urban waterlogging drainage indexing</text>
+      </g>
+
+      <!-- ROW 2 -->
+      <!-- Service 6: Cyclone Service -->
+      <g transform="translate(0, 95)">
+        <rect width="285" height="85" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+        <text x="15" y="20" fill="#f3e8ff" font-size="11" font-weight="800">6. Cyclone Service</text>
+        <text x="15" y="36" fill="#e9d5ff" font-size="9.5">HazardAndFloodEngine.kt</text>
+        <text x="15" y="52" fill="#cbd5e1" font-size="9">• Tropical cyclone eye track projection</text>
+        <text x="15" y="66" fill="#cbd5e1" font-size="9">• Radius of Maximum Wind (RMW) risk</text>
+        <text x="15" y="78" fill="#a855f7" font-size="8.5">Storm surge height for coastal talukas</text>
+      </g>
+
+      <!-- Service 7: Alert Service -->
+      <g transform="translate(300, 95)">
+        <rect width="285" height="85" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+        <text x="15" y="20" fill="#f3e8ff" font-size="11" font-weight="800">7. Alert Service</text>
+        <text x="15" y="36" fill="#e9d5ff" font-size="9.5">AlertPriorityManager.kt &amp; N8nAlertService.kt</text>
+        <text x="15" y="52" fill="#cbd5e1" font-size="9">• Deduplication &amp; Rate-Limiting TTL</text>
+        <text x="15" y="66" fill="#cbd5e1" font-size="9">• Priority Escalation for life-safety</text>
+        <text x="15" y="78" fill="#a855f7" font-size="8.5">Multi-channel Webhook &amp; In-app push</text>
+      </g>
+
+      <!-- Service 8: Gemini AI Service -->
+      <g transform="translate(600, 95)">
+        <rect width="295" height="85" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+        <text x="15" y="20" fill="#f3e8ff" font-size="11" font-weight="800">8. Gemini AI Service</text>
+        <text x="15" y="36" fill="#e9d5ff" font-size="9.5">GeminiApiService.kt &amp; WeatherDecisionEngine.kt</text>
+        <text x="15" y="52" fill="#cbd5e1" font-size="9">• Zero-hallucination prompt grounding</text>
+        <text x="15" y="66" fill="#cbd5e1" font-size="9">• Natural language meteorological advice</text>
+        <text x="15" y="78" fill="#a855f7" font-size="8.5">Structured safety action cards</text>
+      </g>
+
+      <!-- Service 9: KrishiGPT Service -->
+      <g transform="translate(910, 95)">
+        <rect width="290" height="85" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+        <text x="15" y="20" fill="#f3e8ff" font-size="11" font-weight="800">9. KrishiGPT Service</text>
+        <text x="15" y="36" fill="#e9d5ff" font-size="9.5">KrishiGptEngine.kt</text>
+        <text x="15" y="52" fill="#cbd5e1" font-size="9">• Agromet Crop Advisory &amp; Phenology</text>
+        <text x="15" y="66" fill="#cbd5e1" font-size="9">• Spraying Windows (Wind &amp; Rain gating)</text>
+        <text x="15" y="78" fill="#a855f7" font-size="8.5">Irrigation and fungal pest advisories</text>
+      </g>
+
+      <!-- Service 10: Voice Service -->
+      <g transform="translate(1215, 95)">
+        <rect width="290" height="85" rx="6" fill="#3b0764" stroke="#c084fc" stroke-width="1"/>
+        <text x="15" y="20" fill="#f3e8ff" font-size="11" font-weight="800">10. Voice Service</text>
+        <text x="15" y="36" fill="#e9d5ff" font-size="9.5">VoiceSpeechService.kt &amp; VoiceWeatherIntentEngine</text>
+        <text x="15" y="52" fill="#cbd5e1" font-size="9">• STT Audio capture in 10 Indian languages</text>
+        <text x="15" y="66" fill="#cbd5e1" font-size="9">• Low-latency streaming TTS audio playback</text>
+        <text x="15" y="78" fill="#a855f7" font-size="8.5">Hands-free vernacular assistance</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrow down to Data/Persistence -->
+  <line x1="800" y1="580" x2="800" y2="602" stroke="#10b981" stroke-width="2" marker-end="url(#arrowG10)"/>
+
+  <!-- ================= TIER 4: DATA & PERSISTENCE LAYER ================= -->
+  <g transform="translate(40, 605)">
+    <rect width="1520" height="155" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#shadow10)"/>
+    <rect width="1520" height="26" rx="12" fill="#1e293b"/>
+    <rect y="16" width="1520" height="10" fill="#1e293b"/>
+    <text x="20" y="19" fill="#cbd5e1" font-size="12" font-weight="800" letter-spacing="1">TIER 4: PERSISTENCE, CACHE &amp; SPATIAL STORAGE (HYBRID ON-DEVICE &amp; CLOUD ARCHITECTURE)</text>
+
+    <g transform="translate(15, 36)">
+      <!-- Component 1: Redis Cache -->
+      <rect width="365" height="105" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="15" y="22" fill="#38bdf8" font-size="11" font-weight="800">1. In-Memory Cache (Redis / Memory)</text>
+      <text x="15" y="40" fill="#e2e8f0" font-size="10">• Real-time canonical snapshot key-value store</text>
+      <text x="15" y="56" fill="#e2e8f0" font-size="10">• TTL: 15 minutes for observations; 1h for NWP</text>
+      <text x="15" y="72" fill="#e2e8f0" font-size="10">• Fast token bucket rate-limiter state</text>
+      <text x="15" y="90" fill="#94a3b8" font-size="9">Sub-millisecond latency for concurrent requests</text>
+
+      <!-- Component 2: Time-Series / Hydro DB -->
+      <g transform="translate(380, 0)">
+        <rect width="365" height="105" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+        <text x="15" y="22" fill="#38bdf8" font-size="11" font-weight="800">2. Time-Series Metrics &amp; Verification DB</text>
+        <text x="15" y="40" fill="#e2e8f0" font-size="10">• Historical AWS rain &amp; temperature observations</text>
+        <text x="15" y="56" fill="#e2e8f0" font-size="10">• Continuous forecast verification archive (RMSE/MAE)</text>
+        <text x="15" y="72" fill="#e2e8f0" font-size="10">• CWC 30-day river hydrographs &amp; peak discharge</text>
+        <text x="15" y="90" fill="#94a3b8" font-size="9">Powers retrospective climatological analysis</text>
+      </g>
+
+      <!-- Component 3: Spatial PostGIS -->
+      <g transform="translate(760, 0)">
+        <rect width="365" height="105" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+        <text x="15" y="22" fill="#38bdf8" font-size="11" font-weight="800">3. Spatial Geodatabase (PostGIS)</text>
+        <text x="15" y="40" fill="#e2e8f0" font-size="10">• Indian Administrative Boundaries (States, Districts, Blocks)</text>
+        <text x="15" y="56" fill="#e2e8f0" font-size="10">• River catchment basins &amp; drainage topologies</text>
+        <text x="15" y="72" fill="#e2e8f0" font-size="10">• Spatial indexing via R-Tree (ST_Contains, ST_DWithin)</text>
+        <text x="15" y="90" fill="#94a3b8" font-size="9">Sub-second polygon containment queries</text>
+      </g>
+
+      <!-- Component 4: Room Local DB -->
+      <g transform="translate(1140, 0)">
+        <rect width="350" height="105" rx="6" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+        <text x="15" y="22" fill="#86efac" font-size="11" font-weight="800">4. Android Room Database (On-Device)</text>
+        <text x="15" y="40" fill="#f0fdf4" font-size="10">• weather_cache (Active &amp; recent village forecasts)</text>
+        <text x="15" y="56" fill="#f0fdf4" font-size="10">• rural_offline_cache (Offline resilience store)</text>
+        <text x="15" y="72" fill="#f0fdf4" font-size="10">• chat_history &amp; gis_radar_points</text>
+        <text x="15" y="90" fill="#a7f3d0" font-size="9" font-weight="700">Code Ref: WeatherGPTDatabase.kt</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrow down to Clients -->
+  <line x1="800" y1="760" x2="800" y2="782" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowB10)"/>
+
+  <!-- ================= TIER 5: APPLICATION CLIENTS & PRESENTATION TIER ================= -->
+  <g transform="translate(40, 785)">
+    <rect width="1520" height="185" rx="12" fill="#052e16" stroke="#16a34a" stroke-width="2" filter="url(#shadow10)"/>
+    <rect width="1520" height="28" rx="12" fill="#15803d"/>
+    <rect y="18" width="1520" height="10" fill="#15803d"/>
+    <text x="20" y="20" fill="#ffffff" font-size="12" font-weight="900" letter-spacing="1">TIER 5: CLIENT APPLICATION TIER (JETPACK COMPOSE &amp; FIELD CONSUMERS)</text>
+
+    <g transform="translate(15, 38)">
+      <!-- App Screen Pills -->
+      <g transform="translate(0, 0)">
+        <rect width="200" height="52" rx="6" fill="#14532d" stroke="#4ade80" stroke-width="1"/>
+        <text x="15" y="22" fill="#86efac" font-size="11" font-weight="800">WeatherHomeScreen</text>
+        <text x="15" y="38" fill="#f0fdf4" font-size="9.5">Current weather &amp; hourly</text>
+      </g>
+
+      <g transform="translate(215, 0)">
+        <rect width="200" height="52" rx="6" fill="#14532d" stroke="#4ade80" stroke-width="1"/>
+        <text x="15" y="22" fill="#86efac" font-size="11" font-weight="800">ForecastScreen</text>
+        <text x="15" y="38" fill="#f0fdf4" font-size="9.5">24h / 48h ensemble &amp; bust</text>
+      </g>
+
+      <g transform="translate(430, 0)">
+        <rect width="210" height="52" rx="6" fill="#14532d" stroke="#4ade80" stroke-width="1"/>
+        <text x="15" y="22" fill="#86efac" font-size="11" font-weight="800">RadarMapScreen</text>
+        <text x="15" y="38" fill="#f0fdf4" font-size="9.5">Interactive GIS &amp; dBZ loop</text>
+      </g>
+
+      <g transform="translate(655, 0)">
+        <rect width="205" height="52" rx="6" fill="#14532d" stroke="#4ade80" stroke-width="1"/>
+        <text x="15" y="22" fill="#86efac" font-size="11" font-weight="800">AlertsScreen</text>
+        <text x="15" y="38" fill="#f0fdf4" font-size="9.5">Flood, Cyclone &amp; CAP feed</text>
+      </g>
+
+      <g transform="translate(875, 0)">
+        <rect width="205" height="52" rx="6" fill="#14532d" stroke="#4ade80" stroke-width="1"/>
+        <text x="15" y="22" fill="#86efac" font-size="11" font-weight="800">KrishiScreen</text>
+        <text x="15" y="38" fill="#f0fdf4" font-size="9.5">Farmer crop spray advisor</text>
+      </g>
+
+      <g transform="translate(1095, 0)">
+        <rect width="200" height="52" rx="6" fill="#14532d" stroke="#4ade80" stroke-width="1"/>
+        <text x="15" y="22" fill="#86efac" font-size="11" font-weight="800">ChatVoiceScreen</text>
+        <text x="15" y="38" fill="#f0fdf4" font-size="9.5">Grounded Gemini &amp; Voice</text>
+      </g>
+
+      <g transform="translate(1310, 0)">
+        <rect width="180" height="52" rx="6" fill="#14532d" stroke="#4ade80" stroke-width="1"/>
+        <text x="15" y="22" fill="#86efac" font-size="11" font-weight="800">SettingsScreen</text>
+        <text x="15" y="38" fill="#f0fdf4" font-size="9.5">Audit Dialog &amp; Languages</text>
+      </g>
+
+      <!-- Client Performance Sub-row -->
+      <g transform="translate(0, 64)">
+        <rect width="1490" height="68" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+        <text x="20" y="24" fill="#a7f3d0" font-size="11" font-weight="800">PRODUCTION CLIENT ARCHITECTURE &amp; JETPACK METRICS:</text>
+        <text x="20" y="44" fill="#ffffff" font-size="10">• Architecture: Modern MVVM + StateFlow + Clean Architecture Domain Use-Cases</text>
+        <text x="20" y="58" fill="#ffffff" font-size="10">• Material 3 Theming: High-contrast Dark/Light color schemes with Accessible 48dp touch targets</text>
+        <text x="650" y="44" fill="#ffffff" font-size="10">• Dynamic Window Size Support: Smooth layout scaling across mobile, foldables &amp; tablets</text>
+        <text x="650" y="58" fill="#ffffff" font-size="10">• Offline First: Continuous local SQLite persistence ensures 100% operational uptime in rural dead zones</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= FOOTER ================= -->
+  <g transform="translate(40, 1035)">
+    <line x1="0" y1="0" x2="1520" y2="0" stroke="#334155" stroke-width="1"/>
+    <text x="0" y="25" fill="#38bdf8" font-size="12" font-weight="800">WeatherGPT | SIH 2026 | PS-68 | Ministry of Earth Sciences</text>
+    <text x="760" y="25" fill="#facc15" font-size="12" font-weight="700" text-anchor="middle">Data → Intelligence → Forecast → Risk → Action</text>
+    <text x="1520" y="25" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">Production Implementation • Zero-Hallucination Architecture</text>
+  </g>
+</svg>
