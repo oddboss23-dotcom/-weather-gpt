@@ -1,3 +1,4 @@
+<img width="1730" height="909" alt="technical diagram" src="https://github.com/user-attachments/assets/1506fd24-76cf-4e75-8272-9889f24f2894" />
 # 🌦️ WeatherGPT
 
 ### AI-Driven Weather Intelligence System
